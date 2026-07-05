@@ -1,0 +1,3841 @@
+{
+  "season": "2627",
+  "source": "transfermarkt.com",
+  "fetched_teams": 20,
+  "teams": [
+    {
+      "tm_name": "Manchester City",
+      "team": "Man City",
+      "tm_id": 281,
+      "tm_slug": "manchester-city",
+      "market_value_m": 1430.0,
+      "spend_in_m": 160.0,
+      "spend_out_m": 23.17,
+      "net_spend_m": 136.83,
+      "players": [
+        {
+          "name": "Gianluigi Donnarumma",
+          "position": "",
+          "age": "25/02/1999 (27)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "James Trafford",
+          "position": "",
+          "age": "10/10/2002 (23)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Marcus Bettinelli",
+          "position": "",
+          "age": "24/05/1992 (34)",
+          "market_value_m": 0.3
+        },
+        {
+          "name": "Marc Gu\u00e9hi",
+          "position": "",
+          "age": "13/07/2000 (25)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Josko Gvardiol",
+          "position": "",
+          "age": "23/01/2002 (24)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "R\u00faben Dias",
+          "position": "",
+          "age": "14/05/1997 (29)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Abdukodir Khusanov",
+          "position": "",
+          "age": "29/02/2004 (22)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Vitor Reis",
+          "position": "",
+          "age": "12/01/2006 (20)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Juma Bah",
+          "position": "",
+          "age": "11/04/2006 (20)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Max Alleyne",
+          "position": "",
+          "age": "21/07/2005 (20)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Nico O'Reilly",
+          "position": "",
+          "age": "21/03/2005 (21)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Rayan A\u00eft-Nouri",
+          "position": "",
+          "age": "06/06/2001 (25)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Josh Wilson-Esbrand",
+          "position": "",
+          "age": "26/12/2002 (23)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Matheus Nunes",
+          "position": "",
+          "age": "27/08/1998 (27)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Rico Lewis",
+          "position": "",
+          "age": "21/11/2004 (21)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Issa Kabor\u00e9",
+          "position": "",
+          "age": "12/05/2001 (25)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Rodri",
+          "position": "",
+          "age": "22/06/1996 (30)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Nico Gonz\u00e1lez",
+          "position": "",
+          "age": "03/01/2002 (24)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Kalvin Phillips",
+          "position": "",
+          "age": "02/12/1995 (30)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Elliot Anderson",
+          "position": "",
+          "age": "06/11/2002 (23)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Tijjani Reijnders",
+          "position": "",
+          "age": "29/07/1998 (27)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Sverre Nypan",
+          "position": "",
+          "age": "19/12/2006 (19)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Mateo Kovacic",
+          "position": "",
+          "age": "06/05/1994 (32)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Rayan Cherki",
+          "position": "",
+          "age": "17/08/2003 (22)",
+          "market_value_m": 90.0
+        },
+        {
+          "name": "Phil Foden",
+          "position": "",
+          "age": "28/05/2000 (26)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Claudio Echeverri",
+          "position": "",
+          "age": "02/01/2006 (20)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "J\u00e9r\u00e9my Doku",
+          "position": "",
+          "age": "27/05/2002 (24)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Savinho",
+          "position": "",
+          "age": "10/04/2004 (22)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Jack Grealish",
+          "position": "",
+          "age": "10/09/1995 (30)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Antoine Semenyo",
+          "position": "",
+          "age": "07/01/2000 (26)",
+          "market_value_m": 80.0
+        },
+        {
+          "name": "Erling Haaland",
+          "position": "",
+          "age": "21/07/2000 (25)",
+          "market_value_m": 200.0
+        },
+        {
+          "name": "Omar Marmoush",
+          "position": "",
+          "age": "07/02/1999 (27)",
+          "market_value_m": 50.0
+        }
+      ],
+      "top11_value_m": 905.0,
+      "player_count": 32,
+      "squad_boost": 0.96
+    },
+    {
+      "tm_name": "Arsenal FC",
+      "team": "Arsenal",
+      "tm_id": 11,
+      "tm_slug": "fc-arsenal",
+      "market_value_m": 1310.0,
+      "spend_in_m": 52.0,
+      "spend_out_m": 20.0,
+      "net_spend_m": 32.0,
+      "players": [
+        {
+          "name": "David Raya",
+          "position": "",
+          "age": "15/09/1995 (30)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Kepa Arrizabalaga",
+          "position": "",
+          "age": "03/10/1994 (31)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "William Saliba",
+          "position": "",
+          "age": "24/03/2001 (25)",
+          "market_value_m": 100.0
+        },
+        {
+          "name": "Gabriel",
+          "position": "",
+          "age": "19/12/1997 (28)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Piero Hincapi\u00e9",
+          "position": "",
+          "age": "09/01/2002 (24)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Cristhian Mosquera",
+          "position": "",
+          "age": "27/06/2004 (22)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Riccardo Calafiori",
+          "position": "",
+          "age": "19/05/2002 (24)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Jurri\u00ebn Timber",
+          "position": "",
+          "age": "17/06/2001 (25)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Ben White",
+          "position": "",
+          "age": "08/10/1997 (28)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Mart\u00edn Zubimendi",
+          "position": "",
+          "age": "02/02/1999 (27)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Christian N\u00f8rgaard",
+          "position": "",
+          "age": "10/03/1994 (32)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Declan Rice",
+          "position": "",
+          "age": "14/01/1999 (27)",
+          "market_value_m": 120.0
+        },
+        {
+          "name": "Myles Lewis-Skelly",
+          "position": "",
+          "age": "26/09/2006 (19)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Mikel Merino",
+          "position": "",
+          "age": "22/06/1996 (30)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Martin \u00d8degaard",
+          "position": "",
+          "age": "17/12/1998 (27)",
+          "market_value_m": 65.0
+        },
+        {
+          "name": "Eberechi Eze",
+          "position": "",
+          "age": "29/06/1998 (28)",
+          "market_value_m": 65.0
+        },
+        {
+          "name": "Ethan Nwaneri",
+          "position": "",
+          "age": "21/03/2007 (19)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "F\u00e1bio Vieira",
+          "position": "",
+          "age": "30/05/2000 (26)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Gabriel Martinelli",
+          "position": "",
+          "age": "18/06/2001 (25)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Leandro Trossard",
+          "position": "",
+          "age": "04/12/1994 (31)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Reiss Nelson",
+          "position": "",
+          "age": "10/12/1999 (26)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Bukayo Saka",
+          "position": "",
+          "age": "05/09/2001 (24)",
+          "market_value_m": 110.0
+        },
+        {
+          "name": "Noni Madueke",
+          "position": "",
+          "age": "10/03/2002 (24)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Max Dowman",
+          "position": "",
+          "age": "31/12/2009 (16)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Viktor Gy\u00f6keres",
+          "position": "",
+          "age": "04/06/1998 (28)",
+          "market_value_m": 65.0
+        },
+        {
+          "name": "Kai Havertz",
+          "position": "",
+          "age": "11/06/1999 (27)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Gabriel Jesus",
+          "position": "",
+          "age": "03/04/1997 (29)",
+          "market_value_m": 17.0
+        }
+      ],
+      "top11_value_m": 855.0,
+      "player_count": 27,
+      "squad_boost": 0.8592
+    },
+    {
+      "tm_name": "Chelsea FC",
+      "team": "Chelsea",
+      "tm_id": 631,
+      "tm_slug": "fc-chelsea",
+      "market_value_m": 1280.0,
+      "spend_in_m": 119.4,
+      "spend_out_m": 55.0,
+      "net_spend_m": 64.4,
+      "players": [
+        {
+          "name": "Mike Penders",
+          "position": "",
+          "age": "31/07/2005 (20)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Robert S\u00e1nchez",
+          "position": "",
+          "age": "18/11/1997 (28)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Filip J\u00f8rgensen",
+          "position": "",
+          "age": "16/04/2002 (24)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Gabriel Slonina",
+          "position": "",
+          "age": "15/05/2004 (22)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Teddy Sharman-Lowe",
+          "position": "",
+          "age": "30/03/2003 (23)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Levi Colwill",
+          "position": "",
+          "age": "26/02/2003 (23)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Trevoh Chalobah",
+          "position": "",
+          "age": "05/07/1999 (27)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Wesley Fofana",
+          "position": "",
+          "age": "17/12/2000 (25)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Mamadou Sarr",
+          "position": "",
+          "age": "29/08/2005 (20)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Tosin Adarabioyo",
+          "position": "",
+          "age": "24/09/1997 (28)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Axel Disasi",
+          "position": "",
+          "age": "11/03/1998 (28)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Beno\u00eet Badiashile",
+          "position": "",
+          "age": "26/03/2001 (25)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Aar\u00f3n Anselmino",
+          "position": "",
+          "age": "29/04/2005 (21)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Jorrel Hato",
+          "position": "",
+          "age": "07/03/2006 (20)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Caleb Wiley",
+          "position": "",
+          "age": "22/12/2004 (21)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Denner",
+          "position": "",
+          "age": "25/02/2008 (18)",
+          "market_value_m": 0.0
+        },
+        {
+          "name": "Reece James",
+          "position": "",
+          "age": "08/12/1999 (26)",
+          "market_value_m": 60.0
+        },
+        {
+          "name": "Marco Palestra",
+          "position": "",
+          "age": "03/03/2005 (21)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Malo Gusto",
+          "position": "",
+          "age": "19/05/2003 (23)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Josh Acheampong",
+          "position": "",
+          "age": "05/05/2006 (20)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Mois\u00e9s Caicedo",
+          "position": "",
+          "age": "02/11/2001 (24)",
+          "market_value_m": 100.0
+        },
+        {
+          "name": "Rom\u00e9o Lavia",
+          "position": "",
+          "age": "06/01/2004 (22)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "D\u00e1rio Essugo",
+          "position": "",
+          "age": "14/03/2005 (21)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Enzo Fern\u00e1ndez",
+          "position": "",
+          "age": "17/01/2001 (25)",
+          "market_value_m": 90.0
+        },
+        {
+          "name": "Andrey Santos",
+          "position": "",
+          "age": "03/05/2004 (22)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Cole Palmer",
+          "position": "",
+          "age": "06/05/2002 (24)",
+          "market_value_m": 100.0
+        },
+        {
+          "name": "Jamie Gittens",
+          "position": "",
+          "age": "08/08/2004 (21)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Alejandro Garnacho",
+          "position": "",
+          "age": "01/07/2004 (22)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Tyrique George",
+          "position": "",
+          "age": "04/02/2006 (20)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Mykhaylo Mudryk",
+          "position": "",
+          "age": "05/01/2001 (25)",
+          "market_value_m": 0.0
+        },
+        {
+          "name": "Est\u00eav\u00e3o",
+          "position": "",
+          "age": "24/04/2007 (19)",
+          "market_value_m": 80.0
+        },
+        {
+          "name": "Pedro Neto",
+          "position": "",
+          "age": "09/03/2000 (26)",
+          "market_value_m": 60.0
+        },
+        {
+          "name": "Geovany Quenda",
+          "position": "",
+          "age": "30/04/2007 (19)",
+          "market_value_m": 42.0
+        },
+        {
+          "name": "Jo\u00e3o Pedro",
+          "position": "",
+          "age": "26/09/2001 (24)",
+          "market_value_m": 80.0
+        },
+        {
+          "name": "Nicolas Jackson",
+          "position": "",
+          "age": "20/06/2001 (25)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Liam Delap",
+          "position": "",
+          "age": "08/02/2003 (23)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Emmanuel Emegha",
+          "position": "",
+          "age": "03/02/2003 (23)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Marc Guiu",
+          "position": "",
+          "age": "04/01/2006 (20)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "David Datro Fofana",
+          "position": "",
+          "age": "22/12/2002 (23)",
+          "market_value_m": 4.0
+        }
+      ],
+      "top11_value_m": 742.0,
+      "player_count": 39,
+      "squad_boost": 0.8359
+    },
+    {
+      "tm_name": "Liverpool FC",
+      "team": "Liverpool",
+      "tm_id": 31,
+      "tm_slug": "fc-liverpool",
+      "market_value_m": 979.5,
+      "spend_in_m": 103.6,
+      "spend_out_m": 0.0,
+      "net_spend_m": 103.6,
+      "players": [
+        {
+          "name": "Giorgi Mamardashvili",
+          "position": "",
+          "age": "29/09/2000 (25)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Alisson",
+          "position": "",
+          "age": "02/10/1992 (33)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Vitezslav Jaros",
+          "position": "",
+          "age": "23/07/2001 (24)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Freddie Woodman",
+          "position": "",
+          "age": "04/03/1997 (29)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Harvey Davies",
+          "position": "",
+          "age": "03/09/2003 (22)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "J\u00e9r\u00e9my Jacquet",
+          "position": "",
+          "age": "13/07/2005 (20)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Giovanni Leoni",
+          "position": "",
+          "age": "21/12/2006 (19)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Virgil van Dijk",
+          "position": "",
+          "age": "08/07/1991 (34)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Joe Gomez",
+          "position": "",
+          "age": "23/05/1997 (29)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Milos Kerkez",
+          "position": "",
+          "age": "07/11/2003 (22)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Konstantinos Tsimikas",
+          "position": "",
+          "age": "12/05/1996 (30)",
+          "market_value_m": 4.5
+        },
+        {
+          "name": "Jeremie Frimpong",
+          "position": "",
+          "age": "10/12/2000 (25)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Conor Bradley",
+          "position": "",
+          "age": "09/07/2003 (22)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Calvin Ramsay",
+          "position": "",
+          "age": "31/07/2003 (22)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Ryan Gravenberch",
+          "position": "",
+          "age": "16/05/2002 (24)",
+          "market_value_m": 80.0
+        },
+        {
+          "name": "Wataru Endo",
+          "position": "",
+          "age": "09/02/1993 (33)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Stefan Bajcetic",
+          "position": "",
+          "age": "22/10/2004 (21)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Alexis Mac Allister",
+          "position": "",
+          "age": "24/12/1998 (27)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Curtis Jones",
+          "position": "",
+          "age": "30/01/2001 (25)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Trey Nyoni",
+          "position": "",
+          "age": "30/06/2007 (19)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Florian Wirtz",
+          "position": "",
+          "age": "03/05/2003 (23)",
+          "market_value_m": 100.0
+        },
+        {
+          "name": "Dominik Szoboszlai",
+          "position": "",
+          "age": "25/10/2000 (25)",
+          "market_value_m": 100.0
+        },
+        {
+          "name": "Harvey Elliott",
+          "position": "",
+          "age": "04/04/2003 (23)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Cody Gakpo",
+          "position": "",
+          "age": "07/05/1999 (27)",
+          "market_value_m": 60.0
+        },
+        {
+          "name": "V\u00edctor Mu\u00f1oz",
+          "position": "",
+          "age": "13/07/2003 (22)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Rio Ngumoha",
+          "position": "",
+          "age": "29/08/2008 (17)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Federico Chiesa",
+          "position": "",
+          "age": "25/10/1997 (28)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Alexander Isak",
+          "position": "",
+          "age": "21/09/1999 (26)",
+          "market_value_m": 85.0
+        },
+        {
+          "name": "Hugo Ekitik\u00e9",
+          "position": "",
+          "age": "20/06/2002 (24)",
+          "market_value_m": 80.0
+        }
+      ],
+      "top11_value_m": 735.0,
+      "player_count": 29,
+      "squad_boost": 0.7398
+    },
+    {
+      "tm_name": "Tottenham Hotspur",
+      "team": "Tottenham",
+      "tm_id": 148,
+      "tm_slug": "tottenham-hotspur",
+      "market_value_m": 884.5,
+      "spend_in_m": 159.0,
+      "spend_out_m": 9.0,
+      "net_spend_m": 150.0,
+      "players": [
+        {
+          "name": "Guglielmo Vicario",
+          "position": "",
+          "age": "07/10/1996 (29)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Anton\u00edn Kinsk\u00fd",
+          "position": "",
+          "age": "13/03/2003 (23)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Martin D\u00fabravka",
+          "position": "",
+          "age": "15/01/1989 (37)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Brandon Austin",
+          "position": "",
+          "age": "08/01/1999 (27)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Luka Vuskovic",
+          "position": "",
+          "age": "24/02/2007 (19)",
+          "market_value_m": 60.0
+        },
+        {
+          "name": "Micky van de Ven",
+          "position": "",
+          "age": "19/04/2001 (25)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Jan Paul van Hecke",
+          "position": "",
+          "age": "08/06/2000 (26)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Cristian Romero",
+          "position": "",
+          "age": "27/04/1998 (28)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Marcos Senesi",
+          "position": "",
+          "age": "10/05/1997 (29)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Kevin Danso",
+          "position": "",
+          "age": "19/09/1998 (27)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Radu Dr\u0103gu\u0219in",
+          "position": "",
+          "age": "03/02/2002 (24)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Ashley Phillips",
+          "position": "",
+          "age": "26/06/2005 (21)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Kota Takai",
+          "position": "",
+          "age": "04/09/2004 (21)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Ben Davies",
+          "position": "",
+          "age": "24/04/1993 (33)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Destiny Udogie",
+          "position": "",
+          "age": "28/11/2002 (23)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Djed Spence",
+          "position": "",
+          "age": "09/08/2000 (25)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Souza",
+          "position": "",
+          "age": "16/06/2006 (20)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Andrew Robertson",
+          "position": "",
+          "age": "11/03/1994 (32)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Pedro Porro",
+          "position": "",
+          "age": "13/09/1999 (26)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Rodrigo Bentancur",
+          "position": "",
+          "age": "25/06/1997 (29)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Mateus Fernandes",
+          "position": "",
+          "age": "10/07/2004 (21)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Archie Gray",
+          "position": "",
+          "age": "12/03/2006 (20)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Lucas Bergvall",
+          "position": "",
+          "age": "02/02/2006 (20)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Conor Gallagher",
+          "position": "",
+          "age": "06/02/2000 (26)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Pape Matar Sarr",
+          "position": "",
+          "age": "14/09/2002 (23)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Xavi Simons",
+          "position": "",
+          "age": "21/04/2003 (23)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "James Maddison",
+          "position": "",
+          "age": "23/11/1996 (29)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Dejan Kulusevski",
+          "position": "",
+          "age": "25/04/2000 (26)",
+          "market_value_m": 17.0
+        },
+        {
+          "name": "Alfie Devine",
+          "position": "",
+          "age": "01/08/2004 (21)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Mikey Moore",
+          "position": "",
+          "age": "11/08/2007 (18)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Wilson Odobert",
+          "position": "",
+          "age": "28/11/2004 (21)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Manor Solomon",
+          "position": "",
+          "age": "24/07/1999 (26)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Mohammed Kudus",
+          "position": "",
+          "age": "02/08/2000 (25)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Min-hyeok Yang",
+          "position": "",
+          "age": "16/04/2006 (20)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Dominic Solanke",
+          "position": "",
+          "age": "14/09/1997 (28)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Richarlison",
+          "position": "",
+          "age": "10/05/1997 (29)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Mathys Tel",
+          "position": "",
+          "age": "27/04/2005 (21)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Dane Scarlett",
+          "position": "",
+          "age": "24/03/2004 (22)",
+          "market_value_m": 1.5
+        }
+      ],
+      "top11_value_m": 477.0,
+      "player_count": 38,
+      "squad_boost": 0.632
+    },
+    {
+      "tm_name": "Manchester United",
+      "team": "Man United",
+      "tm_id": 985,
+      "tm_slug": "manchester-united",
+      "market_value_m": 802.35,
+      "spend_in_m": 0.0,
+      "spend_out_m": 44.0,
+      "net_spend_m": -44.0,
+      "players": [
+        {
+          "name": "Senne Lammens",
+          "position": "",
+          "age": "07/07/2002 (23)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Altay Bay\u0131nd\u0131r",
+          "position": "",
+          "age": "14/04/1998 (28)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Tom Heaton",
+          "position": "",
+          "age": "15/04/1986 (40)",
+          "market_value_m": 0.1
+        },
+        {
+          "name": "Leny Yoro",
+          "position": "",
+          "age": "13/11/2005 (20)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Lisandro Mart\u00ednez",
+          "position": "",
+          "age": "18/01/1998 (28)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Matthijs de Ligt",
+          "position": "",
+          "age": "12/08/1999 (26)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Ayden Heaven",
+          "position": "",
+          "age": "22/09/2006 (19)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Harry Maguire",
+          "position": "",
+          "age": "05/03/1993 (33)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Tyler Fredricson",
+          "position": "",
+          "age": "23/02/2005 (21)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Luke Shaw",
+          "position": "",
+          "age": "12/07/1995 (30)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Harry Amass",
+          "position": "",
+          "age": "16/03/2007 (19)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Diego Le\u00f3n",
+          "position": "",
+          "age": "03/04/2007 (19)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Diogo Dalot",
+          "position": "",
+          "age": "18/03/1999 (27)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Noussair Mazraoui",
+          "position": "",
+          "age": "14/11/1997 (28)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Manuel Ugarte",
+          "position": "",
+          "age": "11/04/2001 (25)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Toby Collyer",
+          "position": "",
+          "age": "03/01/2004 (22)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Kobbie Mainoo",
+          "position": "",
+          "age": "19/04/2005 (21)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Tyler Fletcher",
+          "position": "",
+          "age": "19/03/2007 (19)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Dan Gore",
+          "position": "",
+          "age": "26/09/2004 (21)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Bruno Fernandes",
+          "position": "",
+          "age": "08/09/1994 (31)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Mason Mount",
+          "position": "",
+          "age": "10/01/1999 (27)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Jack Fletcher",
+          "position": "",
+          "age": "19/03/2007 (19)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Marcus Rashford",
+          "position": "",
+          "age": "31/10/1997 (28)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Patrick Dorgu",
+          "position": "",
+          "age": "26/10/2004 (21)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Bryan Mbeumo",
+          "position": "",
+          "age": "07/08/1999 (26)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Amad Diallo",
+          "position": "",
+          "age": "11/07/2002 (23)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Matheus Cunha",
+          "position": "",
+          "age": "27/05/1999 (27)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Benjamin Sesko",
+          "position": "",
+          "age": "31/05/2003 (23)",
+          "market_value_m": 75.0
+        },
+        {
+          "name": "Joshua Zirkzee",
+          "position": "",
+          "age": "22/05/2001 (25)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Chido Obi",
+          "position": "",
+          "age": "29/11/2007 (18)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Ethan Wheatley",
+          "position": "",
+          "age": "20/01/2006 (20)",
+          "market_value_m": 0.25
+        }
+      ],
+      "top11_value_m": 575.0,
+      "player_count": 31,
+      "squad_boost": 0.541
+    },
+    {
+      "tm_name": "Brighton & Hove Albion",
+      "team": "Brighton",
+      "tm_id": 1237,
+      "tm_slug": "brighton-amp-hove-albion",
+      "market_value_m": 646.7,
+      "spend_in_m": 72.4,
+      "spend_out_m": 63.7,
+      "net_spend_m": 8.7,
+      "players": [
+        {
+          "name": "Bart Verbruggen",
+          "position": "",
+          "age": "18/08/2002 (23)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Carl Rushworth",
+          "position": "",
+          "age": "02/07/2001 (25)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "James Beadle",
+          "position": "",
+          "age": "16/07/2004 (21)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Jason Steele",
+          "position": "",
+          "age": "18/08/1990 (35)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Tom McGill",
+          "position": "",
+          "age": "25/03/2000 (26)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Pascal Struijk",
+          "position": "",
+          "age": "11/08/1999 (26)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Diego Coppola",
+          "position": "",
+          "age": "28/12/2003 (22)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Olivier Boscagli",
+          "position": "",
+          "age": "18/11/1997 (28)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Igor Julio",
+          "position": "",
+          "age": "07/02/1998 (28)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Eiran Cashin",
+          "position": "",
+          "age": "09/11/2001 (24)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Michael Svoboda",
+          "position": "",
+          "age": "15/10/1998 (27)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Lewis Dunk",
+          "position": "",
+          "age": "21/11/1991 (34)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Ferdi Kad\u0131o\u011flu",
+          "position": "",
+          "age": "07/10/1999 (26)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Maxim De Cuyper",
+          "position": "",
+          "age": "22/12/2000 (25)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Mats Wieffer",
+          "position": "",
+          "age": "16/11/1999 (26)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Costinha",
+          "position": "",
+          "age": "26/03/2000 (26)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Carlos Baleba",
+          "position": "",
+          "age": "03/01/2004 (22)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Jack Hinshelwood",
+          "position": "",
+          "age": "11/04/2005 (21)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Yasin Ayari",
+          "position": "",
+          "age": "06/10/2003 (22)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Diego G\u00f3mez",
+          "position": "",
+          "age": "27/03/2003 (23)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Matt O'Riley",
+          "position": "",
+          "age": "21/11/2000 (25)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Malick Yalcouy\u00e9",
+          "position": "",
+          "age": "18/11/2005 (20)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Pascal Gro\u00df",
+          "position": "",
+          "age": "15/06/1991 (35)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Brajan Gruda",
+          "position": "",
+          "age": "31/05/2004 (22)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Facundo Buonanotte",
+          "position": "",
+          "age": "23/12/2004 (21)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Kaoru Mitoma",
+          "position": "",
+          "age": "20/05/1997 (29)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Ibrahim Osman",
+          "position": "",
+          "age": "29/11/2004 (21)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Tom Watson",
+          "position": "",
+          "age": "08/04/2006 (20)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Yankuba Minteh",
+          "position": "",
+          "age": "22/07/2004 (21)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Zadok Yohanna",
+          "position": "",
+          "age": "29/06/2007 (19)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Amario Cozier-Duberry",
+          "position": "",
+          "age": "29/05/2005 (21)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Rodrigo R\u00eago",
+          "position": "",
+          "age": "03/01/2005 (21)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Do-young Yoon",
+          "position": "",
+          "age": "28/10/2006 (19)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Georginio Rutter",
+          "position": "",
+          "age": "20/04/2002 (24)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Charalampos Kostoulas",
+          "position": "",
+          "age": "30/05/2007 (19)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Evan Ferguson",
+          "position": "",
+          "age": "19/10/2004 (21)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Stefanos Tzimas",
+          "position": "",
+          "age": "06/01/2006 (20)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Danny Welbeck",
+          "position": "",
+          "age": "26/11/1990 (35)",
+          "market_value_m": 3.0
+        }
+      ],
+      "top11_value_m": 371.0,
+      "player_count": 38,
+      "squad_boost": 0.4564
+    },
+    {
+      "tm_name": "Newcastle United",
+      "team": "Newcastle",
+      "tm_id": 762,
+      "tm_slug": "newcastle-united",
+      "market_value_m": 628.0,
+      "spend_in_m": 21.5,
+      "spend_out_m": 80.0,
+      "net_spend_m": -58.5,
+      "players": [
+        {
+          "name": "Ewen Jaouen",
+          "position": "",
+          "age": "29/12/2005 (20)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Nick Pope",
+          "position": "",
+          "age": "19/04/1992 (34)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Mark Gillespie",
+          "position": "",
+          "age": "27/03/1992 (34)",
+          "market_value_m": 0.1
+        },
+        {
+          "name": "Malick Thiaw",
+          "position": "",
+          "age": "08/08/2001 (24)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Sven Botman",
+          "position": "",
+          "age": "12/01/2000 (26)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Fabian Sch\u00e4r",
+          "position": "",
+          "age": "20/12/1991 (34)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Dan Burn",
+          "position": "",
+          "age": "09/05/1992 (34)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Lewis Hall",
+          "position": "",
+          "age": "08/09/2004 (21)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Alex Murphy",
+          "position": "",
+          "age": "25/06/2004 (22)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Tino Livramento",
+          "position": "",
+          "age": "12/11/2002 (23)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Harrison Ashby",
+          "position": "",
+          "age": "14/11/2001 (24)",
+          "market_value_m": 1.2
+        },
+        {
+          "name": "Sandro Tonali",
+          "position": "",
+          "age": "08/05/2000 (26)",
+          "market_value_m": 80.0
+        },
+        {
+          "name": "Bruno Guimar\u00e3es",
+          "position": "",
+          "age": "16/11/1997 (28)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Jacob Ramsey",
+          "position": "",
+          "age": "28/05/2001 (25)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Joelinton",
+          "position": "",
+          "age": "14/08/1996 (29)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Lewis Miley",
+          "position": "",
+          "age": "01/05/2006 (20)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Joe Willock",
+          "position": "",
+          "age": "20/08/1999 (26)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Joe White",
+          "position": "",
+          "age": "01/10/2002 (23)",
+          "market_value_m": 0.2
+        },
+        {
+          "name": "Harvey Barnes",
+          "position": "",
+          "age": "09/12/1997 (28)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Anto\u00f1ito Cordero",
+          "position": "",
+          "age": "14/11/2006 (19)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Anthony Elanga",
+          "position": "",
+          "age": "27/04/2002 (24)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Jacob Murphy",
+          "position": "",
+          "age": "24/02/1995 (31)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Nick Woltemade",
+          "position": "",
+          "age": "14/02/2002 (24)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "William Osula",
+          "position": "",
+          "age": "04/08/2003 (22)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Yoane Wissa",
+          "position": "",
+          "age": "03/09/1996 (29)",
+          "market_value_m": 25.0
+        }
+      ],
+      "top11_value_m": 497.0,
+      "player_count": 25,
+      "squad_boost": 0.4437
+    },
+    {
+      "tm_name": "AFC Bournemouth",
+      "team": "Bournemouth",
+      "tm_id": 989,
+      "tm_slug": "afc-bournemouth",
+      "market_value_m": 550.38,
+      "spend_in_m": 18.5,
+      "spend_out_m": 11.4,
+      "net_spend_m": 7.1,
+      "players": [
+        {
+          "name": "Djordje Petrovic",
+          "position": "",
+          "age": "08/10/1999 (26)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Alex Paulsen",
+          "position": "",
+          "age": "04/07/2002 (24)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Fraser Forster",
+          "position": "",
+          "age": "17/03/1988 (38)",
+          "market_value_m": 0.4
+        },
+        {
+          "name": "Will Dennis",
+          "position": "",
+          "age": "10/07/2000 (25)",
+          "market_value_m": 0.325
+        },
+        {
+          "name": "Bafod\u00e9 Diakit\u00e9",
+          "position": "",
+          "age": "06/01/2001 (25)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "James Hill",
+          "position": "",
+          "age": "10/01/2002 (24)",
+          "market_value_m": 23.0
+        },
+        {
+          "name": "Veljko Milosavljevic",
+          "position": "",
+          "age": "28/06/2007 (19)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Matai Akinmboni",
+          "position": "",
+          "age": "17/10/2006 (19)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Adrien Truffert",
+          "position": "",
+          "age": "20/11/2001 (24)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Julio Soler",
+          "position": "",
+          "age": "16/02/2005 (21)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "\u00c1lex Jim\u00e9nez",
+          "position": "",
+          "age": "08/05/2005 (21)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Juli\u00e1n Araujo",
+          "position": "",
+          "age": "13/08/2001 (24)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Max Aarons",
+          "position": "",
+          "age": "04/01/2000 (26)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Adam Smith",
+          "position": "",
+          "age": "29/04/1991 (35)",
+          "market_value_m": 0.3
+        },
+        {
+          "name": "Tyler Adams",
+          "position": "",
+          "age": "14/02/1999 (27)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Ben Winterburn",
+          "position": "",
+          "age": "04/09/2004 (21)",
+          "market_value_m": 0.35
+        },
+        {
+          "name": "Alex Scott",
+          "position": "",
+          "age": "21/08/2003 (22)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Alex T\u00f3th",
+          "position": "",
+          "age": "23/10/2005 (20)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Lewis Cook",
+          "position": "",
+          "age": "03/02/1997 (29)",
+          "market_value_m": 11.0
+        },
+        {
+          "name": "Ryan Christie",
+          "position": "",
+          "age": "22/02/1995 (31)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Marcus Tavernier",
+          "position": "",
+          "age": "22/03/1999 (27)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Justin Kluivert",
+          "position": "",
+          "age": "05/05/1999 (27)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Amine Adli",
+          "position": "",
+          "age": "10/05/2000 (26)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Rayan",
+          "position": "",
+          "age": "03/08/2006 (19)",
+          "market_value_m": 60.0
+        },
+        {
+          "name": "Ben Gannon-Doak",
+          "position": "",
+          "age": "11/11/2005 (20)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "David Brooks",
+          "position": "",
+          "age": "08/07/1997 (28)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Junior Kroupi",
+          "position": "",
+          "age": "23/06/2006 (20)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Evanilson",
+          "position": "",
+          "age": "06/10/1999 (26)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Enes \u00dcnal",
+          "position": "",
+          "age": "10/05/1997 (29)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Daniel Jebbison",
+          "position": "",
+          "age": "13/08/2003 (22)",
+          "market_value_m": 6.0
+        }
+      ],
+      "top11_value_m": 396.0,
+      "player_count": 30,
+      "squad_boost": 0.4253
+    },
+    {
+      "tm_name": "Aston Villa",
+      "team": "Aston Villa",
+      "tm_id": 405,
+      "tm_slug": "aston-villa",
+      "market_value_m": 522.2,
+      "spend_in_m": 5.5,
+      "spend_out_m": 37.0,
+      "net_spend_m": -31.5,
+      "players": [
+        {
+          "name": "Emiliano Mart\u00ednez",
+          "position": "",
+          "age": "02/09/1992 (33)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Oliwier Zych",
+          "position": "",
+          "age": "28/06/2004 (22)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Marco Bizot",
+          "position": "",
+          "age": "10/03/1991 (35)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Joe Gauci",
+          "position": "",
+          "age": "04/07/2000 (26)",
+          "market_value_m": 1.2
+        },
+        {
+          "name": "Ezri Konsa",
+          "position": "",
+          "age": "23/10/1997 (28)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Pau Torres",
+          "position": "",
+          "age": "16/01/1997 (29)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Modou K\u00e9ba Ciss\u00e9",
+          "position": "",
+          "age": "04/08/2005 (20)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Victor Lindel\u00f6f",
+          "position": "",
+          "age": "17/07/1994 (31)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Tyrone Mings",
+          "position": "",
+          "age": "13/03/1993 (33)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Ian Maatsen",
+          "position": "",
+          "age": "10/03/2002 (24)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Lucas Digne",
+          "position": "",
+          "age": "20/07/1993 (32)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Matty Cash",
+          "position": "",
+          "age": "07/08/1997 (28)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Andr\u00e9s Garc\u00eda",
+          "position": "",
+          "age": "07/02/2003 (23)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Kosta Nedeljkovic",
+          "position": "",
+          "age": "16/12/2005 (20)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Amadou Onana",
+          "position": "",
+          "age": "16/08/2001 (24)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Boubacar Kamara",
+          "position": "",
+          "age": "23/11/1999 (26)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Lamare Bogarde",
+          "position": "",
+          "age": "05/01/2004 (22)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Youri Tielemans",
+          "position": "",
+          "age": "07/05/1997 (29)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "John McGinn",
+          "position": "",
+          "age": "18/10/1994 (31)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Ross Barkley",
+          "position": "",
+          "age": "05/12/1993 (32)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Samuel Iling-Junior",
+          "position": "",
+          "age": "04/10/2003 (22)",
+          "market_value_m": 6.5
+        },
+        {
+          "name": "Morgan Rogers",
+          "position": "",
+          "age": "26/07/2002 (23)",
+          "market_value_m": 90.0
+        },
+        {
+          "name": "Emiliano Buend\u00eda",
+          "position": "",
+          "age": "25/12/1996 (29)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Lewis Dobbin",
+          "position": "",
+          "age": "03/01/2003 (23)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Evann Guessand",
+          "position": "",
+          "age": "01/07/2001 (25)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Leon Bailey",
+          "position": "",
+          "age": "09/08/1997 (28)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Alysson",
+          "position": "",
+          "age": "05/05/2006 (20)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Ollie Watkins",
+          "position": "",
+          "age": "30/12/1995 (30)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Tammy Abraham",
+          "position": "",
+          "age": "02/10/1997 (28)",
+          "market_value_m": 18.0
+        }
+      ],
+      "top11_value_m": 385.0,
+      "player_count": 29,
+      "squad_boost": 0.3883
+    },
+    {
+      "tm_name": "Nottingham Forest",
+      "team": "Nott'm Forest",
+      "tm_id": 703,
+      "tm_slug": "nottingham-forest",
+      "market_value_m": 517.8,
+      "spend_in_m": 0.0,
+      "spend_out_m": 135.0,
+      "net_spend_m": -135.0,
+      "players": [
+        {
+          "name": "John Victor",
+          "position": "",
+          "age": "13/02/1996 (30)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Matz Sels",
+          "position": "",
+          "age": "26/02/1992 (34)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Murillo",
+          "position": "",
+          "age": "04/07/2002 (24)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Nikola Milenkovi\u0107",
+          "position": "",
+          "age": "12/10/1997 (28)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Jair Cunha",
+          "position": "",
+          "age": "07/03/2005 (21)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Morato",
+          "position": "",
+          "age": "30/06/2001 (25)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Zach Abbott",
+          "position": "",
+          "age": "13/05/2006 (20)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Tyler Bindon",
+          "position": "",
+          "age": "27/01/2005 (21)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Neco Williams",
+          "position": "",
+          "age": "13/04/2001 (25)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Luca Netz",
+          "position": "",
+          "age": "15/05/2003 (23)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Omar Richards",
+          "position": "",
+          "age": "15/02/1998 (28)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Ola Aina",
+          "position": "",
+          "age": "08/10/1996 (29)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Nicol\u00f2 Savona",
+          "position": "",
+          "age": "19/03/2003 (23)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Eric da Silva Moreira",
+          "position": "",
+          "age": "03/05/2006 (20)",
+          "market_value_m": 0.8
+        },
+        {
+          "name": "Ibrahim Sangar\u00e9",
+          "position": "",
+          "age": "02/12/1997 (28)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Nicol\u00e1s Dom\u00ednguez",
+          "position": "",
+          "age": "28/06/1998 (28)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Ryan Yates",
+          "position": "",
+          "age": "21/11/1997 (28)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Morgan Gibbs-White",
+          "position": "",
+          "age": "27/01/2000 (26)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Omari Hutchinson",
+          "position": "",
+          "age": "30/10/2003 (22)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "James McAtee",
+          "position": "",
+          "age": "18/10/2002 (23)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Callum Hudson-Odoi",
+          "position": "",
+          "age": "07/11/2000 (25)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Jota Silva",
+          "position": "",
+          "age": "01/08/1999 (26)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Dan Ndoye",
+          "position": "",
+          "age": "25/10/2000 (25)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Dilane Bakwa",
+          "position": "",
+          "age": "26/08/2002 (23)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Arnaud Kalimuendo",
+          "position": "",
+          "age": "20/01/2002 (24)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Igor Jesus",
+          "position": "",
+          "age": "25/02/2001 (25)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Taiwo Awoniyi",
+          "position": "",
+          "age": "12/08/1997 (28)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Chris Wood",
+          "position": "",
+          "age": "07/12/1991 (34)",
+          "market_value_m": 5.0
+        }
+      ],
+      "top11_value_m": 366.0,
+      "player_count": 28,
+      "squad_boost": 0.3403
+    },
+    {
+      "tm_name": "Crystal Palace",
+      "team": "Crystal Palace",
+      "tm_id": 873,
+      "tm_slug": "crystal-palace",
+      "market_value_m": 512.55,
+      "spend_in_m": 0.0,
+      "spend_out_m": 0.0,
+      "net_spend_m": 0.0,
+      "players": [
+        {
+          "name": "Dean Henderson",
+          "position": "",
+          "age": "12/03/1997 (29)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Walter Ben\u00edtez",
+          "position": "",
+          "age": "19/01/1993 (33)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Owen Goodman",
+          "position": "",
+          "age": "27/11/2003 (22)",
+          "market_value_m": 0.55
+        },
+        {
+          "name": "Remi Matthews",
+          "position": "",
+          "age": "10/02/1994 (32)",
+          "market_value_m": 0.2
+        },
+        {
+          "name": "Maxence Lacroix",
+          "position": "",
+          "age": "06/04/2000 (26)",
+          "market_value_m": 50.0
+        },
+        {
+          "name": "Jaydee Canvot",
+          "position": "",
+          "age": "29/07/2006 (19)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Chris Richards",
+          "position": "",
+          "age": "28/03/2000 (26)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Chadi Riad",
+          "position": "",
+          "age": "17/06/2003 (23)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Tyrick Mitchell",
+          "position": "",
+          "age": "01/09/1999 (26)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Borna Sosa",
+          "position": "",
+          "age": "21/01/1998 (28)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Rio Cardines",
+          "position": "",
+          "age": "01/07/2006 (20)",
+          "market_value_m": 0.3
+        },
+        {
+          "name": "Daniel Mu\u00f1oz",
+          "position": "",
+          "age": "26/05/1996 (30)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Caleb Kporha",
+          "position": "",
+          "age": "15/07/2006 (19)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Nathaniel Clyne",
+          "position": "",
+          "age": "05/04/1991 (35)",
+          "market_value_m": 0.3
+        },
+        {
+          "name": "Adam Wharton",
+          "position": "",
+          "age": "06/02/2004 (22)",
+          "market_value_m": 70.0
+        },
+        {
+          "name": "Cheick Doucour\u00e9",
+          "position": "",
+          "age": "08/01/2000 (26)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Jefferson Lerma",
+          "position": "",
+          "age": "25/10/1994 (31)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "David Ozoh",
+          "position": "",
+          "age": "06/05/2005 (21)",
+          "market_value_m": 2.2
+        },
+        {
+          "name": "Will Hughes",
+          "position": "",
+          "age": "17/04/1995 (31)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Justin Devenny",
+          "position": "",
+          "age": "11/10/2003 (22)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Matheus Fran\u00e7a",
+          "position": "",
+          "age": "01/04/2004 (22)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Isma\u00efla Sarr",
+          "position": "",
+          "age": "25/02/1998 (28)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Y\u00e9remy Pino",
+          "position": "",
+          "age": "20/10/2002 (23)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Brennan Johnson",
+          "position": "",
+          "age": "23/05/2001 (25)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Romain Esse",
+          "position": "",
+          "age": "13/05/2005 (21)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Jesurun Rak-Sakyi",
+          "position": "",
+          "age": "05/10/2002 (23)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "J\u00f8rgen Strand Larsen",
+          "position": "",
+          "age": "06/02/2000 (26)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Jean-Philippe Mateta",
+          "position": "",
+          "age": "28/06/1997 (29)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Eddie Nketiah",
+          "position": "",
+          "age": "30/05/1999 (27)",
+          "market_value_m": 10.0
+        }
+      ],
+      "top11_value_m": 399.0,
+      "player_count": 29,
+      "squad_boost": 0.4074
+    },
+    {
+      "tm_name": "Brentford FC",
+      "team": "Brentford",
+      "tm_id": 1148,
+      "tm_slug": "fc-brentford",
+      "market_value_m": 502.2,
+      "spend_in_m": 18.0,
+      "spend_out_m": 7.0,
+      "net_spend_m": 11.0,
+      "players": [
+        {
+          "name": "Caoimh\u00edn Kelleher",
+          "position": "",
+          "age": "23/11/1998 (27)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "H\u00e1kon Valdimarsson",
+          "position": "",
+          "age": "13/10/2001 (24)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Matthew Cox",
+          "position": "",
+          "age": "02/05/2003 (23)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Ellery Balcombe",
+          "position": "",
+          "age": "15/10/1999 (26)",
+          "market_value_m": 0.4
+        },
+        {
+          "name": "Julian Eyestone",
+          "position": "",
+          "age": "21/04/2006 (20)",
+          "market_value_m": 0.0
+        },
+        {
+          "name": "Sepp van den Berg",
+          "position": "",
+          "age": "20/12/2001 (24)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Nathan Collins",
+          "position": "",
+          "age": "30/04/2001 (25)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Jannik Schuster",
+          "position": "",
+          "age": "16/05/2006 (20)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Kristoffer Ajer",
+          "position": "",
+          "age": "17/04/1998 (28)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Ethan Pinnock",
+          "position": "",
+          "age": "29/05/1993 (33)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Ji-soo Kim",
+          "position": "",
+          "age": "24/12/2004 (21)",
+          "market_value_m": 1.8
+        },
+        {
+          "name": "Benjamin Arthur",
+          "position": "",
+          "age": "09/10/2005 (20)",
+          "market_value_m": 0.1
+        },
+        {
+          "name": "Rico Henry",
+          "position": "",
+          "age": "08/07/1997 (28)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Jayden Meghoma",
+          "position": "",
+          "age": "28/06/2006 (20)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Michael Kayode",
+          "position": "",
+          "age": "10/07/2004 (21)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "Aaron Hickey",
+          "position": "",
+          "age": "10/06/2002 (24)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Vitaly Janelt",
+          "position": "",
+          "age": "10/05/1998 (28)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Yunus Konak",
+          "position": "",
+          "age": "10/01/2006 (20)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Jordan Henderson",
+          "position": "",
+          "age": "17/06/1990 (36)",
+          "market_value_m": 1.2
+        },
+        {
+          "name": "Yegor Yarmolyuk",
+          "position": "",
+          "age": "01/03/2004 (22)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Mathias Jensen",
+          "position": "",
+          "age": "01/01/1996 (30)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Josh Dasilva",
+          "position": "",
+          "age": "23/10/1998 (27)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Keane Lewis-Potter",
+          "position": "",
+          "age": "22/02/2001 (25)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Mikkel Damsgaard",
+          "position": "",
+          "age": "03/07/2000 (26)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Antoni Milambo",
+          "position": "",
+          "age": "03/04/2005 (21)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "F\u00e1bio Carvalho",
+          "position": "",
+          "age": "30/08/2002 (23)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Kevin Schade",
+          "position": "",
+          "age": "27/11/2001 (24)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Gustavo Nunes",
+          "position": "",
+          "age": "20/11/2005 (20)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Dango Ouattara",
+          "position": "",
+          "age": "11/02/2002 (24)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Romelle Donovan",
+          "position": "",
+          "age": "30/11/2006 (19)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Igor Thiago",
+          "position": "",
+          "age": "26/06/2001 (25)",
+          "market_value_m": 65.0
+        },
+        {
+          "name": "Kaye Furo",
+          "position": "",
+          "age": "06/02/2007 (19)",
+          "market_value_m": 8.0
+        }
+      ],
+      "top11_value_m": 370.0,
+      "player_count": 32,
+      "squad_boost": 0.402
+    },
+    {
+      "tm_name": "Everton FC",
+      "team": "Everton",
+      "tm_id": 29,
+      "tm_slug": "fc-everton",
+      "market_value_m": 434.1,
+      "spend_in_m": 44.3,
+      "spend_out_m": 0.0,
+      "net_spend_m": 44.3,
+      "players": [
+        {
+          "name": "Jordan Pickford",
+          "position": "",
+          "age": "07/03/1994 (32)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Mark Travers",
+          "position": "",
+          "age": "18/05/1999 (27)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Tom King",
+          "position": "",
+          "age": "09/03/1995 (31)",
+          "market_value_m": 0.1
+        },
+        {
+          "name": "Jarrad Branthwaite",
+          "position": "",
+          "age": "27/06/2002 (24)",
+          "market_value_m": 40.0
+        },
+        {
+          "name": "James Tarkowski",
+          "position": "",
+          "age": "19/11/1992 (33)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Michael Keane",
+          "position": "",
+          "age": "11/01/1993 (33)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Vitaliy Mykolenko",
+          "position": "",
+          "age": "29/05/1999 (27)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Adam Aznou",
+          "position": "",
+          "age": "02/06/2006 (20)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Jake O'Brien",
+          "position": "",
+          "age": "15/05/2001 (25)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Nathan Patterson",
+          "position": "",
+          "age": "16/10/2001 (24)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "James Garner",
+          "position": "",
+          "age": "13/03/2001 (25)",
+          "market_value_m": 45.0
+        },
+        {
+          "name": "Hayden Hackney",
+          "position": "",
+          "age": "26/06/2002 (24)",
+          "market_value_m": 32.0
+        },
+        {
+          "name": "Kiernan Dewsbury-Hall",
+          "position": "",
+          "age": "06/09/1998 (27)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Tim Iroegbunam",
+          "position": "",
+          "age": "30/06/2003 (23)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Carlos Alcaraz",
+          "position": "",
+          "age": "30/11/2002 (23)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Harrison Armstrong",
+          "position": "",
+          "age": "19/01/2007 (19)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Merlin R\u00f6hl",
+          "position": "",
+          "age": "05/07/2002 (24)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Dwight McNeil",
+          "position": "",
+          "age": "22/11/1999 (26)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "position": "",
+          "age": "06/03/2000 (26)",
+          "market_value_m": 55.0
+        },
+        {
+          "name": "Tyler Dibling",
+          "position": "",
+          "age": "17/02/2006 (20)",
+          "market_value_m": 17.0
+        },
+        {
+          "name": "Thierno Barry",
+          "position": "",
+          "age": "21/10/2002 (23)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Beto",
+          "position": "",
+          "age": "31/01/1998 (28)",
+          "market_value_m": 18.0
+        }
+      ],
+      "top11_value_m": 334.0,
+      "player_count": 22,
+      "squad_boost": 0.3858
+    },
+    {
+      "tm_name": "Sunderland AFC",
+      "team": "Sunderland",
+      "tm_id": 289,
+      "tm_slug": "afc-sunderland",
+      "market_value_m": 399.18,
+      "spend_in_m": 0.0,
+      "spend_out_m": 0.0,
+      "net_spend_m": 0.0,
+      "players": [
+        {
+          "name": "Robin Roefs",
+          "position": "",
+          "age": "17/01/2003 (23)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Anthony Patterson",
+          "position": "",
+          "age": "10/05/2000 (26)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Melker Ellborg",
+          "position": "",
+          "age": "22/05/2003 (23)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Simon Moore",
+          "position": "",
+          "age": "19/05/1990 (36)",
+          "market_value_m": 0.075
+        },
+        {
+          "name": "Dan Ballard",
+          "position": "",
+          "age": "22/09/1999 (26)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Omar Alderete",
+          "position": "",
+          "age": "26/12/1996 (29)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Jenson Seelt",
+          "position": "",
+          "age": "23/05/2003 (23)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Leo Hjelde",
+          "position": "",
+          "age": "26/08/2003 (22)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Aji Alese",
+          "position": "",
+          "age": "17/01/2001 (25)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Luke O'Nien",
+          "position": "",
+          "age": "21/11/1994 (31)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Reinildo Mandava",
+          "position": "",
+          "age": "21/01/1994 (32)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "Arthur Masuaku",
+          "position": "",
+          "age": "07/11/1993 (32)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Trai Hume",
+          "position": "",
+          "age": "18/03/2002 (24)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Nordi Mukiele",
+          "position": "",
+          "age": "01/11/1997 (28)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Timoth\u00e9e Pemb\u00e9l\u00e9",
+          "position": "",
+          "age": "09/09/2002 (23)",
+          "market_value_m": 1.8
+        },
+        {
+          "name": "Granit Xhaka",
+          "position": "",
+          "age": "27/09/1992 (33)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Habib Diarra",
+          "position": "",
+          "age": "03/01/2004 (22)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Noah Sadiki",
+          "position": "",
+          "age": "17/12/2004 (21)",
+          "market_value_m": 35.0
+        },
+        {
+          "name": "Enzo Le F\u00e9e",
+          "position": "",
+          "age": "03/02/2000 (26)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Alan Browne",
+          "position": "",
+          "age": "15/04/1995 (31)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Abdoullah Ba",
+          "position": "",
+          "age": "31/07/2003 (22)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Chris Rigg",
+          "position": "",
+          "age": "18/06/2007 (19)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Simon Adingra",
+          "position": "",
+          "age": "01/01/2002 (24)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Nilson Angulo",
+          "position": "",
+          "age": "19/06/2003 (23)",
+          "market_value_m": 17.0
+        },
+        {
+          "name": "Romaine Mundle",
+          "position": "",
+          "age": "24/04/2003 (23)",
+          "market_value_m": 7.0
+        },
+        {
+          "name": "Chemsdine Talbi",
+          "position": "",
+          "age": "09/05/2005 (21)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Jocelin Ta Bi",
+          "position": "",
+          "age": "09/02/2005 (21)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Brian Brobbey",
+          "position": "",
+          "age": "01/02/2002 (24)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Wilson Isidor",
+          "position": "",
+          "age": "27/08/2000 (25)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Eliezer Mayenda",
+          "position": "",
+          "age": "08/05/2005 (21)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Ahmed Abdullahi",
+          "position": "",
+          "age": "19/06/2004 (22)",
+          "market_value_m": 0.8
+        },
+        {
+          "name": "Lu\u00eds Semedo",
+          "position": "",
+          "age": "11/08/2003 (22)",
+          "market_value_m": 0.6
+        }
+      ],
+      "top11_value_m": 288.0,
+      "player_count": 32,
+      "squad_boost": 0.3331
+    },
+    {
+      "tm_name": "Leeds United",
+      "team": "Leeds",
+      "tm_id": 399,
+      "tm_slug": "leeds-united",
+      "market_value_m": 353.8,
+      "spend_in_m": 0.0,
+      "spend_out_m": 23.2,
+      "net_spend_m": -23.2,
+      "players": [
+        {
+          "name": "Lucas Perri",
+          "position": "",
+          "age": "10/12/1997 (28)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Alex Cairns",
+          "position": "",
+          "age": "04/01/1993 (33)",
+          "market_value_m": 0.05
+        },
+        {
+          "name": "Jaka Bijol",
+          "position": "",
+          "age": "05/02/1999 (27)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Joe Rodon",
+          "position": "",
+          "age": "22/10/1997 (28)",
+          "market_value_m": 18.0
+        },
+        {
+          "name": "Sebastiaan Bornauw",
+          "position": "",
+          "age": "22/03/1999 (27)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Maximilian W\u00f6ber",
+          "position": "",
+          "age": "04/02/1998 (28)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Gabriel Gudmundsson",
+          "position": "",
+          "age": "29/04/1999 (27)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Isaac Schmidt",
+          "position": "",
+          "age": "07/12/1999 (26)",
+          "market_value_m": 2.2
+        },
+        {
+          "name": "Sam Byram",
+          "position": "",
+          "age": "16/09/1993 (32)",
+          "market_value_m": 0.4
+        },
+        {
+          "name": "Jayden Bogle",
+          "position": "",
+          "age": "27/07/2000 (25)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "James Justin",
+          "position": "",
+          "age": "23/02/1998 (28)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Ethan Ampadu",
+          "position": "",
+          "age": "14/09/2000 (25)",
+          "market_value_m": 30.0
+        },
+        {
+          "name": "Anton Stach",
+          "position": "",
+          "age": "15/11/1998 (27)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Ilia Gruev",
+          "position": "",
+          "age": "06/05/2000 (26)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Charlie Crew",
+          "position": "",
+          "age": "15/06/2006 (20)",
+          "market_value_m": 0.15
+        },
+        {
+          "name": "Sean Longstaff",
+          "position": "",
+          "age": "30/10/1997 (28)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Ao Tanaka",
+          "position": "",
+          "age": "10/09/1998 (27)",
+          "market_value_m": 13.0
+        },
+        {
+          "name": "Brenden Aaronson",
+          "position": "",
+          "age": "22/10/2000 (25)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Noah Okafor",
+          "position": "",
+          "age": "24/05/2000 (26)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Largie Ramazani",
+          "position": "",
+          "age": "27/02/2001 (25)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Jack Harrison",
+          "position": "",
+          "age": "20/11/1996 (29)",
+          "market_value_m": 6.5
+        },
+        {
+          "name": "Wilfried Gnonto",
+          "position": "",
+          "age": "05/11/2003 (22)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Daniel James",
+          "position": "",
+          "age": "10/11/1997 (28)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Dominic Calvert-Lewin",
+          "position": "",
+          "age": "16/03/1997 (29)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Joe Gelhardt",
+          "position": "",
+          "age": "04/05/2002 (24)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Jo\u00ebl Piroe",
+          "position": "",
+          "age": "02/08/1999 (26)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Lukas Nmecha",
+          "position": "",
+          "age": "14/12/1998 (27)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Mateo Joseph",
+          "position": "",
+          "age": "19/10/2003 (22)",
+          "market_value_m": 3.5
+        }
+      ],
+      "top11_value_m": 231.0,
+      "player_count": 28,
+      "squad_boost": 0.286
+    },
+    {
+      "tm_name": "Fulham FC",
+      "team": "Fulham",
+      "tm_id": 931,
+      "tm_slug": "fc-fulham",
+      "market_value_m": 310.2,
+      "spend_in_m": 6.0,
+      "spend_out_m": 0.0,
+      "net_spend_m": 6.0,
+      "players": [
+        {
+          "name": "Bernd Leno",
+          "position": "",
+          "age": "04/03/1992 (34)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Benjamin Lecomte",
+          "position": "",
+          "age": "26/04/1991 (35)",
+          "market_value_m": 0.8
+        },
+        {
+          "name": "Calvin Bassey",
+          "position": "",
+          "age": "31/12/1999 (26)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Joachim Andersen",
+          "position": "",
+          "age": "31/05/1996 (30)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Jorge Cuenca",
+          "position": "",
+          "age": "17/11/1999 (26)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Issa Diop",
+          "position": "",
+          "age": "09/01/1997 (29)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Ryan Sessegnon",
+          "position": "",
+          "age": "18/05/2000 (26)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Antonee Robinson",
+          "position": "",
+          "age": "08/08/1997 (28)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Kenny Tete",
+          "position": "",
+          "age": "09/10/1995 (30)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Timothy Castagne",
+          "position": "",
+          "age": "05/12/1995 (30)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Sander Berge",
+          "position": "",
+          "age": "14/02/1998 (28)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Sa\u0161a Luki\u0107",
+          "position": "",
+          "age": "13/08/1996 (29)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Harrison Reed",
+          "position": "",
+          "age": "27/01/1995 (31)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Tom Cairney",
+          "position": "",
+          "age": "20/01/1991 (35)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Josh King",
+          "position": "",
+          "age": "03/01/2007 (19)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Emile Smith Rowe",
+          "position": "",
+          "age": "28/07/2000 (25)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Luke Harris",
+          "position": "",
+          "age": "04/03/2005 (21)",
+          "market_value_m": 0.9
+        },
+        {
+          "name": "Kevin",
+          "position": "",
+          "age": "04/01/2003 (23)",
+          "market_value_m": 25.0
+        },
+        {
+          "name": "Alex Iwobi",
+          "position": "",
+          "age": "03/05/1996 (30)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Oscar Bobb",
+          "position": "",
+          "age": "12/07/2003 (22)",
+          "market_value_m": 28.0
+        },
+        {
+          "name": "Rodrigo Muniz",
+          "position": "",
+          "age": "04/05/2001 (25)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Jonah Kusi-Asare",
+          "position": "",
+          "age": "04/07/2007 (19)",
+          "market_value_m": 3.0
+        }
+      ],
+      "top11_value_m": 255.0,
+      "player_count": 22,
+      "squad_boost": 0.2933
+    },
+    {
+      "tm_name": "Ipswich Town",
+      "team": "Ipswich",
+      "tm_id": 677,
+      "tm_slug": "ipswich-town",
+      "market_value_m": 200.7,
+      "spend_in_m": 13.8,
+      "spend_out_m": 7.0,
+      "net_spend_m": 6.8,
+      "players": [
+        {
+          "name": "Christian Walton",
+          "position": "",
+          "age": "09/11/1995 (30)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Alex Palmer",
+          "position": "",
+          "age": "10/08/1996 (29)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Cieran Slicker",
+          "position": "",
+          "age": "15/09/2002 (23)",
+          "market_value_m": 0.35
+        },
+        {
+          "name": "David Button",
+          "position": "",
+          "age": "27/02/1989 (37)",
+          "market_value_m": 0.05
+        },
+        {
+          "name": "Dara O'Shea",
+          "position": "",
+          "age": "04/03/1999 (27)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Jacob Greaves",
+          "position": "",
+          "age": "12/09/2000 (25)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "C\u00e9dric Kipr\u00e9",
+          "position": "",
+          "age": "09/12/1996 (29)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Elkan Baggott",
+          "position": "",
+          "age": "23/10/2002 (23)",
+          "market_value_m": 0.2
+        },
+        {
+          "name": "Leif Davis",
+          "position": "",
+          "age": "31/12/1999 (26)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Ben Johnson",
+          "position": "",
+          "age": "24/01/2000 (26)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Harry Clarke",
+          "position": "",
+          "age": "02/03/2001 (25)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Darnell Furlong",
+          "position": "",
+          "age": "31/10/1995 (30)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "Azor Matusiwa",
+          "position": "",
+          "age": "28/04/1998 (28)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Marcelino N\u00fa\u00f1ez",
+          "position": "",
+          "age": "01/03/2000 (26)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Jack Taylor",
+          "position": "",
+          "age": "23/06/1998 (28)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Cameron Humphreys",
+          "position": "",
+          "age": "30/10/2003 (22)",
+          "market_value_m": 0.6
+        },
+        {
+          "name": "Kasey McAteer",
+          "position": "",
+          "age": "22/11/2001 (24)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Wes Burns",
+          "position": "",
+          "age": "23/11/1994 (31)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Anis Mehmeti",
+          "position": "",
+          "age": "09/01/2001 (25)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Sammie Szmodics",
+          "position": "",
+          "age": "24/09/1995 (30)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Jaden Philogene",
+          "position": "",
+          "age": "08/02/2002 (24)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Jack Clarke",
+          "position": "",
+          "age": "23/11/2000 (25)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Sindre Walle Egeli",
+          "position": "",
+          "age": "21/06/2006 (20)",
+          "market_value_m": 15.0
+        },
+        {
+          "name": "Chiedozie Ogbene",
+          "position": "",
+          "age": "01/05/1997 (29)",
+          "market_value_m": 4.0
+        },
+        {
+          "name": "George Hirst",
+          "position": "",
+          "age": "15/02/1999 (27)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Chuba Akpom",
+          "position": "",
+          "age": "09/10/1995 (30)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Ali Al-Hamadi",
+          "position": "",
+          "age": "01/03/2002 (24)",
+          "market_value_m": 1.5
+        }
+      ],
+      "top11_value_m": 166.0,
+      "player_count": 27,
+      "squad_boost": 0.2271
+    },
+    {
+      "tm_name": "Coventry City",
+      "team": "Coventry",
+      "tm_id": 990,
+      "tm_slug": "coventry-city",
+      "market_value_m": 199.35,
+      "spend_in_m": 7.0,
+      "spend_out_m": 0.0,
+      "net_spend_m": 7.0,
+      "players": [
+        {
+          "name": "Oliver Dovin",
+          "position": "",
+          "age": "11/07/2002 (23)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Ben Wilson",
+          "position": "",
+          "age": "09/08/1992 (33)",
+          "market_value_m": 0.3
+        },
+        {
+          "name": "Bobby Thomas",
+          "position": "",
+          "age": "30/01/2001 (25)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Liam Kitching",
+          "position": "",
+          "age": "25/09/1999 (26)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Joel Latibeaudiere",
+          "position": "",
+          "age": "06/01/2000 (26)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Luke Woolfenden",
+          "position": "",
+          "age": "21/10/1998 (27)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Jay Dasilva",
+          "position": "",
+          "age": "22/04/1998 (28)",
+          "market_value_m": 9.0
+        },
+        {
+          "name": "Miguel \u00c1ngel Brau",
+          "position": "",
+          "age": "27/12/2001 (24)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Jake Bidwell",
+          "position": "",
+          "age": "21/03/1993 (33)",
+          "market_value_m": 0.6
+        },
+        {
+          "name": "Milan van Ewijk",
+          "position": "",
+          "age": "08/09/2000 (25)",
+          "market_value_m": 22.0
+        },
+        {
+          "name": "Kaine Kesler-Hayden",
+          "position": "",
+          "age": "23/10/2002 (23)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Matt Grimes",
+          "position": "",
+          "age": "15/07/1995 (30)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Victor Torp",
+          "position": "",
+          "age": "30/07/1999 (26)",
+          "market_value_m": 14.0
+        },
+        {
+          "name": "Josh Eccles",
+          "position": "",
+          "age": "06/04/2000 (26)",
+          "market_value_m": 9.0
+        },
+        {
+          "name": "Frank Onyeka",
+          "position": "",
+          "age": "01/01/1998 (28)",
+          "market_value_m": 8.0
+        },
+        {
+          "name": "Kai Andrews",
+          "position": "",
+          "age": "06/08/2006 (19)",
+          "market_value_m": 0.5
+        },
+        {
+          "name": "Ephron Mason-Clark",
+          "position": "",
+          "age": "25/08/1999 (26)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Jack Rudoni",
+          "position": "",
+          "age": "14/06/2001 (25)",
+          "market_value_m": 20.0
+        },
+        {
+          "name": "Raphael Borges Rodrigues",
+          "position": "",
+          "age": "11/09/2003 (22)",
+          "market_value_m": 0.45
+        },
+        {
+          "name": "Tatsuhiro Sakamoto",
+          "position": "",
+          "age": "22/10/1996 (29)",
+          "market_value_m": 4.5
+        },
+        {
+          "name": "Jahnoah Markelo",
+          "position": "",
+          "age": "04/01/2003 (23)",
+          "market_value_m": 3.5
+        },
+        {
+          "name": "Haji Wright",
+          "position": "",
+          "age": "27/03/1998 (28)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Brandon Thomas-Asante",
+          "position": "",
+          "age": "29/12/1998 (27)",
+          "market_value_m": 16.0
+        },
+        {
+          "name": "Ellis Simms",
+          "position": "",
+          "age": "05/01/2001 (25)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Norman Bassette",
+          "position": "",
+          "age": "09/11/2004 (21)",
+          "market_value_m": 1.5
+        }
+      ],
+      "top11_value_m": 164.0,
+      "player_count": 25,
+      "squad_boost": 0.2262
+    },
+    {
+      "tm_name": "Hull City",
+      "team": "Hull",
+      "tm_id": 3008,
+      "tm_slug": "hull-city",
+      "market_value_m": 72.15,
+      "spend_in_m": 3.5,
+      "spend_out_m": 7.0,
+      "net_spend_m": -3.5,
+      "players": [
+        {
+          "name": "Jack Butland",
+          "position": "",
+          "age": "10/03/1993 (33)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Thimoth\u00e9e Lo-Tutala",
+          "position": "",
+          "age": "13/02/2003 (23)",
+          "market_value_m": 0.4
+        },
+        {
+          "name": "Dillon Phillips",
+          "position": "",
+          "age": "11/06/1995 (31)",
+          "market_value_m": 0.2
+        },
+        {
+          "name": "Harvey Cartwright",
+          "position": "",
+          "age": "09/05/2002 (24)",
+          "market_value_m": 0.15
+        },
+        {
+          "name": "Charlie Hughes",
+          "position": "",
+          "age": "16/10/2003 (22)",
+          "market_value_m": 10.0
+        },
+        {
+          "name": "Paddy McNair",
+          "position": "",
+          "age": "27/04/1995 (31)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "John Egan",
+          "position": "",
+          "age": "20/10/1992 (33)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Semi Ajayi",
+          "position": "",
+          "age": "09/11/1993 (32)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Ryan Giles",
+          "position": "",
+          "age": "26/01/2000 (26)",
+          "market_value_m": 12.0
+        },
+        {
+          "name": "Matty Jacob",
+          "position": "",
+          "age": "03/06/2001 (25)",
+          "market_value_m": 0.4
+        },
+        {
+          "name": "Cody Drameh",
+          "position": "",
+          "age": "08/12/2001 (24)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Lewie Coyle",
+          "position": "",
+          "age": "15/10/1995 (30)",
+          "market_value_m": 1.2
+        },
+        {
+          "name": "Regan Slater",
+          "position": "",
+          "age": "11/09/1999 (26)",
+          "market_value_m": 5.5
+        },
+        {
+          "name": "Darko Gyabi",
+          "position": "",
+          "age": "18/02/2004 (22)",
+          "market_value_m": 2.0
+        },
+        {
+          "name": "Eliot Matazo",
+          "position": "",
+          "age": "15/02/2002 (24)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Matt Crooks",
+          "position": "",
+          "age": "20/01/1994 (32)",
+          "market_value_m": 0.7
+        },
+        {
+          "name": "Abd\u00fclkadir \u00d6m\u00fcr",
+          "position": "",
+          "age": "25/06/1999 (27)",
+          "market_value_m": 1.5
+        },
+        {
+          "name": "Kieran Dowell",
+          "position": "",
+          "age": "10/10/1997 (28)",
+          "market_value_m": 0.6
+        },
+        {
+          "name": "Liam Millar",
+          "position": "",
+          "age": "27/09/1999 (26)",
+          "market_value_m": 3.0
+        },
+        {
+          "name": "Mohamed Belloumi",
+          "position": "",
+          "age": "01/06/2002 (24)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Abu Kamara",
+          "position": "",
+          "age": "21/07/2003 (22)",
+          "market_value_m": 2.5
+        },
+        {
+          "name": "David Akintola",
+          "position": "",
+          "age": "13/01/1996 (30)",
+          "market_value_m": 1.0
+        },
+        {
+          "name": "Kyle Joseph",
+          "position": "",
+          "age": "10/09/2001 (24)",
+          "market_value_m": 6.0
+        },
+        {
+          "name": "Oli McBurnie",
+          "position": "",
+          "age": "04/06/1996 (30)",
+          "market_value_m": 5.0
+        },
+        {
+          "name": "Mason Burstow",
+          "position": "",
+          "age": "04/08/2003 (22)",
+          "market_value_m": 2.8
+        },
+        {
+          "name": "Enis Destan",
+          "position": "",
+          "age": "15/06/2002 (24)",
+          "market_value_m": 2.0
+        }
+      ],
+      "top11_value_m": 57.8,
+      "player_count": 26,
+      "squad_boost": 0.1416
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6CABDD"/>
+      <stop offset="100%" stop-color="#1C2C5B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#g)"/>
+  <rect width="800" height="300" fill="#0b0f1a" opacity="0.35"/>
+  <text x="40" y="200" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">Etihad Stadium</text>
+  <text x="40" y="235" fill="#cbd5e1" font-family="Inter,Arial,sans-serif" font-size="18">Manchester · Man City</text>
+</svg>

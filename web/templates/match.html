@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Preview · Premier League Predictor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero hero-compact">
+      <div class="hero-inner">
+        <a href="/" class="back-link">← Back to dashboard</a>
+        <h1 id="match-title">Match Preview</h1>
+        <p class="hero-sub" id="match-sub"></p>
+      </div>
+    </header>
+    <main class="content">
+      <div id="match-preview" class="card"></div>
+      <div class="grid-2 mt">
+        <div class="card">
+          <h2 id="home-squad-title">Home Squad</h2>
+          <div id="home-squad"></div>
+        </div>
+        <div class="card">
+          <h2 id="away-squad-title">Away Squad</h2>
+          <div id="away-squad"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/static/js/match.js"></script>
+</body>
+</html>

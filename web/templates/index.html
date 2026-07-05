@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier League Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">Live Simulator</div>
+        <h1>Premier League <span class="accent">Predictor</span></h1>
+        <p class="hero-sub">Trained on <strong>10 seasons</strong> of match results. Squad values, transfers, and manager changes adjust 2026–27 projections.</p>
+        <div class="hero-stats" id="hero-stats">
+          <div class="stat-card skeleton"></div>
+          <div class="stat-card skeleton"></div>
+          <div class="stat-card skeleton"></div>
+          <div class="stat-card skeleton"></div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="predictions">Upcoming Fixtures</button>
+      <button class="tab" data-tab="standings">Projected Table</button>
+      <button class="tab" data-tab="methodology">Data & Limits</button>
+      <button class="tab" data-tab="results">Season Results</button>
+    </nav>
+
+    <main class="content">
+      <section id="panel-overview" class="panel active">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Model Performance</h2>
+            <div id="model-metrics" class="metrics-grid"></div>
+          </div>
+          <div class="card">
+            <h2>Recent Accuracy</h2>
+            <div id="accuracy-breakdown"></div>
+          </div>
+        </div>
+        <div class="card mt">
+          <h2>Next 5 Fixtures</h2>
+          <div id="next-fixtures" class="fixtures-list"></div>
+        </div>
+      </section>
+
+      <section id="panel-predictions" class="panel">
+        <div class="card">
+          <div class="card-header">
+            <h2>Upcoming Match Predictions</h2>
+            <span class="pill" id="upcoming-count">—</span>
+          </div>
+          <div id="all-predictions" class="fixtures-list"></div>
+        </div>
+      </section>
+
+      <section id="panel-standings" class="panel">
+        <div class="card">
+          <div class="card-header">
+            <h2>Projected League Table</h2>
+            <span class="muted">Projected from calibrated match probabilities (realistic W/D/L splits)</span>
+          </div>
+          <div class="table-wrap">
+            <table class="standings-table" id="standings-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>P</th>
+                  <th>W</th>
+                  <th>D</th>
+                  <th>L</th>
+                  <th>GF</th>
+                  <th>GA</th>
+                  <th>GD</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-methodology" class="panel">
+        <div class="grid-2">
+          <div class="card">
+            <h2>Training Data (Last 10 Seasons)</h2>
+            <div id="training-manifest"></div>
+          </div>
+          <div class="card">
+            <h2>What the Model Uses</h2>
+            <div id="methodology-info"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-results" class="panel">
+        <div class="card">
+          <div class="card-header">
+            <h2><span id="season-results-label">Season</span> Results</h2>
+            <span class="pill" id="season-accuracy">—</span>
+          </div>
+          <div class="table-wrap">
+            <table class="results-table" id="results-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Match</th>
+                  <th>Score</th>
+                  <th>Result</th>
+                  <th>Predicted</th>
+                  <th>Probabilities</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Data: football-data.co.uk · Re-run <code>python -m src.pipeline</code> after each matchday to refresh</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
