@@ -1,6 +1,7 @@
 const SEASON_LABEL = '2026–27';
 let PREDICT_SEASON = '2627';
 let TEAMS = {};
+let ALL_UPCOMING = [];
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
@@ -233,6 +234,40 @@ function renderResults(matches) {
   }).join('');
 }
 
+function fixtureMatchesQuery(m, q) {
+  const hay = [
+    m.HomeTeam, m.AwayTeam, m.stadium, m.Round ? `MD ${m.Round}` : '',
+    m.Date ? new Date(m.Date).toLocaleDateString('en-GB') : '',
+  ].join(' ').toLowerCase();
+  const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+  return tokens.every((t) => hay.includes(t));
+}
+
+function renderUpcomingList(upcoming, seasonLabel) {
+  if (!ALL_UPCOMING.length) {
+    $('#upcoming-count').textContent = '0 fixtures';
+    $('#all-predictions').innerHTML = '<p class="empty-state">No upcoming predictions available.</p>';
+    return;
+  }
+  $('#upcoming-count').textContent = upcoming.length === ALL_UPCOMING.length
+    ? `${upcoming.length} fixtures`
+    : `${upcoming.length} of ${ALL_UPCOMING.length}`;
+  $('#all-predictions').innerHTML = upcoming.length
+    ? `<div class="limit-banner">Score predictions use a Poisson model from team scoring rates. Squad market value and net transfer spend from Transfermarkt nudge team strength for ${seasonLabel}.</div>${upcoming.map(renderFixtureCard).join('')}`
+    : '<p class="empty-state">No matches match your filter.</p>';
+}
+
+function setupFixtureFilter(seasonLabel) {
+  const input = $('#fixture-filter');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    const filtered = q
+      ? ALL_UPCOMING.filter((m) => fixtureMatchesQuery(m, q))
+      : ALL_UPCOMING;
+    renderUpcomingList(filtered, seasonLabel);
+  });
+}
 function setupTabs() {
   $$('.tab').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -268,15 +303,14 @@ async function load() {
     renderTrainingManifest(manifest);
     renderMethodology(methodology);
 
+    ALL_UPCOMING = upcoming;
     const next5 = upcoming.slice(0, 5);
     $('#next-fixtures').innerHTML = next5.length
       ? next5.map(renderFixtureCard).join('')
       : '<p class="empty-state">No upcoming fixtures. Re-run the pipeline to refresh.</p>';
 
-    $('#upcoming-count').textContent = `${upcoming.length} fixtures`;
-    $('#all-predictions').innerHTML = upcoming.length
-      ? `<div class="limit-banner">Score predictions use a Poisson model from team scoring rates. Squad market value and net transfer spend from Transfermarkt nudge team strength for ${seasonLabel}.</div>${upcoming.map(renderFixtureCard).join('')}`
-      : '<p class="empty-state">No upcoming predictions available.</p>';
+    renderUpcomingList(upcoming, seasonLabel);
+    setupFixtureFilter(seasonLabel);
 
     renderStandings(standings);
 

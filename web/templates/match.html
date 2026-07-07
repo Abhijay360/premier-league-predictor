@@ -12,6 +12,17 @@
     <header class="hero hero-compact">
       <div class="hero-inner">
         <a href="/" class="back-link">← Back to dashboard</a>
+        <div class="match-search-wrap match-search-compact" data-match-search>
+          <input
+            class="match-search-input"
+            type="search"
+            placeholder="Search another match…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-expanded="false"
+          />
+          <div class="match-search-dropdown hidden" role="listbox"></div>
+        </div>
         <h1 id="match-title">Match Preview</h1>
         <p class="hero-sub" id="match-sub"></p>
       </div>
@@ -31,6 +42,7 @@
       </div>
     </main>
   </div>
+  <script src="/static/js/search.js"></script>
   <script src="/static/js/match.js"></script>
 </body>
 </html>

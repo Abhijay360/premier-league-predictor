@@ -22,6 +22,20 @@
           <div class="stat-card skeleton"></div>
           <div class="stat-card skeleton"></div>
         </div>
+        <div class="match-search-wrap" data-match-search>
+          <label class="sr-only" for="match-search-input">Search matches</label>
+          <input
+            id="match-search-input"
+            class="match-search-input"
+            type="search"
+            placeholder="Search matches — e.g. Arsenal, Man City vs Chelsea, Etihad…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-expanded="false"
+            aria-controls="match-search-dropdown"
+          />
+          <div id="match-search-dropdown" class="match-search-dropdown hidden" role="listbox"></div>
+        </div>
       </div>
     </header>
 
@@ -55,7 +69,17 @@
         <div class="card">
           <div class="card-header">
             <h2>Upcoming Match Predictions</h2>
-            <span class="pill" id="upcoming-count">—</span>
+            <div class="card-header-actions">
+              <input
+                id="fixture-filter"
+                class="fixture-filter-input"
+                type="search"
+                placeholder="Filter list…"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <span class="pill" id="upcoming-count">—</span>
+            </div>
           </div>
           <div id="all-predictions" class="fixtures-list"></div>
         </div>
@@ -133,6 +157,7 @@
   </div>
 
   <div id="toast" class="toast hidden"></div>
+  <script src="/static/js/search.js"></script>
   <script src="/static/js/app.js"></script>
 </body>
 </html>

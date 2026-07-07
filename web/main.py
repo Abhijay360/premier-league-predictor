@@ -40,6 +40,83 @@ def _df_to_records(df: pd.DataFrame) -> list[dict[str, Any]]:
     return out.replace({np.nan: None}).to_dict(orient="records")
 
 
+def _load_all_fixtures() -> pd.DataFrame:
+    """Full season fixture list (played + upcoming)."""
+    sim_path = paths.processed_dir / "season_simulation.parquet"
+    if sim_path.exists():
+        return load_parquet(sim_path).sort_values("Date").reset_index(drop=True)
+    up_path = paths.processed_dir / "predictions_upcoming.parquet"
+    if up_path.exists():
+        return load_parquet(up_path).sort_values("Date").reset_index(drop=True)
+    return pd.DataFrame()
+
+
+def _find_fixture(home: str, away: str, date: str = "") -> pd.Series | None:
+    df = _load_all_fixtures()
+    if df.empty:
+        return None
+    mask = (df["HomeTeam"] == home) & (df["AwayTeam"] == away)
+    if date:
+        mask &= df["Date"].astype(str).str.startswith(date)
+    rows = df[mask]
+    if rows.empty:
+        return None
+    return rows.iloc[0]
+
+
+def _search_fixtures(df: pd.DataFrame, q: str, limit: int = 25) -> pd.DataFrame:
+    q = q.strip().lower()
+    if not q:
+        return df.head(limit)
+
+    for sep in (" vs ", " v ", " - ", " @ "):
+        if sep in q:
+            left, right = (p.strip() for p in q.split(sep, 1))
+            if left and right:
+                home_hit = df["HomeTeam"].str.lower().str.contains(left, regex=False, na=False)
+                away_hit = df["AwayTeam"].str.lower().str.contains(right, regex=False, na=False)
+                fwd = home_hit & away_hit
+                rev = (
+                    df["HomeTeam"].str.lower().str.contains(right, regex=False, na=False)
+                    & df["AwayTeam"].str.lower().str.contains(left, regex=False, na=False)
+                )
+                hits = df[fwd | rev]
+                if len(hits):
+                    return hits.head(limit)
+
+    tokens = [t for t in q.replace("/", " ").split() if t]
+    if len(tokens) >= 2:
+        t1, t2 = tokens[0], " ".join(tokens[1:])
+        fwd = (
+            df["HomeTeam"].str.lower().str.contains(t1, regex=False, na=False)
+            & df["AwayTeam"].str.lower().str.contains(t2, regex=False, na=False)
+        )
+        rev = (
+            df["HomeTeam"].str.lower().str.contains(t2, regex=False, na=False)
+            & df["AwayTeam"].str.lower().str.contains(t1, regex=False, na=False)
+        )
+        hits = df[fwd | rev]
+        if len(hits):
+            return hits.head(limit)
+
+    mask = (
+        df["HomeTeam"].str.lower().str.contains(q, regex=False, na=False)
+        | df["AwayTeam"].str.lower().str.contains(q, regex=False, na=False)
+    )
+    if "stadium" in df.columns:
+        mask |= df["stadium"].astype(str).str.lower().str.contains(q, regex=False, na=False)
+    if "Round" in df.columns and q.isdigit():
+        mask |= df["Round"].astype(str) == q
+    return df[mask].head(limit)
+
+
+def _enrich_fixture_record(rec: dict[str, Any]) -> dict[str, Any]:
+    home = rec.get("HomeTeam", "")
+    rec["stadium_image"] = team_stadium_image(home)
+    rec["stadium"] = rec.get("stadium") or team_stadium(home)
+    return rec
+
+
 def _season_played(season: str) -> pd.DataFrame:
     all_feats = paths.processed_dir / "match_features_all.parquet"
     if not all_feats.exists():
@@ -150,20 +227,22 @@ def team_squad(team: str) -> dict[str, Any]:
 
 @app.get("/api/fixture")
 def fixture_detail(home: str, away: str, date: str = "") -> dict[str, Any]:
-    path = paths.processed_dir / "predictions_upcoming.parquet"
-    if not path.exists():
-        raise HTTPException(404, "Predictions not found.")
-    df = load_parquet(path)
-    mask = (df["HomeTeam"] == home) & (df["AwayTeam"] == away)
-    if date:
-        mask &= df["Date"].astype(str).str.startswith(date)
-    rows = df[mask]
-    if rows.empty:
+    row = _find_fixture(home, away, date)
+    if row is None:
         raise HTTPException(404, "Fixture not found.")
-    rec = _df_to_records(rows.head(1))[0]
-    rec["stadium_image"] = team_stadium_image(home)
-    rec["stadium"] = team_stadium(home)
-    return rec
+    rec = _df_to_records(pd.DataFrame([row]))[0]
+    return _enrich_fixture_record(rec)
+
+
+@app.get("/api/matches/search")
+def search_matches(q: str = "", limit: int = 25) -> dict[str, Any]:
+    df = _load_all_fixtures()
+    if df.empty:
+        raise HTTPException(404, "Fixtures not found. Run the pipeline first.")
+    limit = max(1, min(int(limit), 50))
+    hits = _search_fixtures(df, q, limit=limit)
+    records = [_enrich_fixture_record(r) for r in _df_to_records(hits)]
+    return {"query": q, "count": len(records), "matches": records}
 
 
 @app.get("/api/fixture/insights")
@@ -192,11 +271,7 @@ def upcoming_predictions() -> list[dict[str, Any]]:
     if not path.exists():
         raise HTTPException(404, "Predictions not found. Run the pipeline first.")
     df = load_parquet(path).sort_values("Date")
-    records = _df_to_records(df)
-    for rec in records:
-        home = rec.get("HomeTeam", "")
-        rec["stadium_image"] = team_stadium_image(home)
-        rec["stadium"] = team_stadium(home)
+    records = [_enrich_fixture_record(r) for r in _df_to_records(df)]
     return records
 
 
