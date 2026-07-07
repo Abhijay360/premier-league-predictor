@@ -166,6 +166,18 @@ def fixture_detail(home: str, away: str, date: str = "") -> dict[str, Any]:
     return rec
 
 
+@app.get("/api/fixture/insights")
+def fixture_insights_api(home: str, away: str, date: str = "", recent_n: int = 5) -> dict[str, Any]:
+    """
+    Rich match insights for the match detail page:
+    xG bars, scoreline heatmap, recent form, confidence, and short explanation blocks.
+    """
+    rec = fixture_detail(home=home, away=away, date=date)
+    from src.predict.fixture_insights import fixture_insights
+
+    return fixture_insights(rec, recent_n=int(recent_n))
+
+
 @app.get("/api/report")
 def report() -> dict[str, Any]:
     data = _load_json(paths.models_dir / "pl_ftr_logreg.report.json")

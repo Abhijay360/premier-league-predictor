@@ -362,6 +362,38 @@ body {
 .prob-fill.away { background: var(--away); }
 .prob-pct { text-align: right; color: var(--muted); }
 
+/* Match insights */
+.insights-head { display:flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.confidence { color: var(--muted); font-size: 0.85rem; }
+.mt-sm { margin-top: 1rem; }
+
+.xg-cards { display:grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.25rem; }
+.xg-card { background: var(--surface-2); border: 1px solid rgba(148,163,184,0.15); border-radius: 12px; padding: 0.75rem 0.9rem; }
+.xg-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.xg-value { font-size: 1.35rem; font-weight: 800; margin-top: 0.25rem; }
+.xg-bar { height: 10px; background: var(--bg); border-radius: 999px; overflow:hidden; margin-top: 0.65rem; display:flex; }
+.xg-fill { height: 100%; }
+.xg-fill.home { background: rgba(59,130,246,0.85); }
+.xg-fill.away { background: rgba(249,115,22,0.85); }
+
+.mini-card { background: var(--surface-2); border: 1px solid rgba(148,163,184,0.15); border-radius: 12px; padding: 0.85rem 0.9rem; }
+.mini-card h3 { margin:0 0 0.55rem 0; font-size: 1rem; }
+.mini-metrics { display:grid; grid-template-columns: 1fr 1fr; gap: 0.45rem 0.75rem; font-size: 0.85rem; }
+.mini-metrics div { display:flex; justify-content: space-between; gap: 0.6rem; }
+.mini-metrics strong { font-weight: 800; }
+
+.heatmap-wrap { margin-top: 0.25rem; }
+.heatmap-head { display:flex; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.6rem; }
+.heatmap-head .small { font-size: 0.78rem; }
+.heatmap-grid { display:grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.heatmap-cell { border-radius: 10px; padding: 0.6rem 0.4rem; text-align:center; font-weight: 700; font-size: 0.75rem; border: 1px solid rgba(148,163,184,0.12); }
+
+.explain-list { display:flex; flex-direction: column; gap: 0.65rem; }
+.explain-row { background: var(--surface-2); border: 1px solid rgba(148,163,184,0.15); border-radius: 12px; padding: 0.85rem 0.95rem; display:grid; grid-template-columns: 170px 1fr; gap: 0.25rem 0.75rem; }
+.explain-title { font-weight: 800; }
+.explain-badge { font-weight: 800; color: #34d399; }
+.explain-detail { grid-column: 1 / -1; margin-top: 0.15rem; font-size: 0.88rem; line-height: 1.45; }
+
 /* Tables */
 .table-wrap { overflow-x: auto; }
 
