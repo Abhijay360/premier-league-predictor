@@ -29,6 +29,20 @@ class TeamRecentForm:
     gf: int
     ga: int
     clean_sheets: int
+    sequence: tuple[str, ...] = ()
+
+    @property
+    def form_points(self) -> int:
+        return 3 * self.wins + self.draws
+
+    @property
+    def attack_efficiency(self) -> float:
+        return self.gf_per_game
+
+    @property
+    def defensive_solidity(self) -> float:
+        # Higher = tougher defence (scale ~4–10 for PL rates)
+        return float(np.clip(10.0 - self.ga_per_game * 2.2, 3.0, 10.0))
 
     @property
     def win_rate(self) -> float:
@@ -68,7 +82,7 @@ def _recent_form(df: pd.DataFrame, team: str, n: int = 5) -> TeamRecentForm:
     both = pd.concat([home[["Date", "gf", "ga", "res"]], away[["Date", "gf", "ga", "res"]]], ignore_index=True)
     both = both.sort_values("Date").tail(n)
     if len(both) == 0:
-        return TeamRecentForm(games=0, wins=0, draws=0, losses=0, gf=0, ga=0, clean_sheets=0)
+        return TeamRecentForm(games=0, wins=0, draws=0, losses=0, gf=0, ga=0, clean_sheets=0, sequence=())
 
     wins = int((both["res"] == "H").sum())
     draws = int((both["res"] == "D").sum())
@@ -76,7 +90,76 @@ def _recent_form(df: pd.DataFrame, team: str, n: int = 5) -> TeamRecentForm:
     gf = int(both["gf"].sum())
     ga = int(both["ga"].sum())
     cs = int((both["ga"] == 0).sum())
-    return TeamRecentForm(games=int(len(both)), wins=wins, draws=draws, losses=losses, gf=gf, ga=ga, clean_sheets=cs)
+    seq = tuple({"H": "W", "D": "D", "A": "L"}.get(str(r), str(r)) for r in both["res"].tolist())
+    return TeamRecentForm(
+        games=int(len(both)), wins=wins, draws=draws, losses=losses,
+        gf=gf, ga=ga, clean_sheets=cs, sequence=seq,
+    )
+
+
+def _form_momentum(sequence: tuple[str, ...]) -> tuple[float, str]:
+    """Recency-weighted form score in [-1, 1] and a short label."""
+    if not sequence:
+        return 0.0, "No recent data"
+    weights = np.array([1.0, 0.85, 0.7, 0.55, 0.4, 0.3][: len(sequence)], dtype=float)
+    weights = weights / weights.sum()
+    pts = {"W": 1.0, "D": 0.15, "L": -1.0}
+    raw = sum(weights[i] * pts.get(sequence[i], 0.0) for i in range(len(sequence)))
+    score = float(np.clip(raw, -1.0, 1.0))
+    if score >= 0.35:
+        label = "Strong recent run"
+    elif score >= 0.1:
+        label = "Positive momentum"
+    elif score <= -0.35:
+        label = "Poor recent run"
+    elif score <= -0.1:
+        label = "Negative momentum"
+    else:
+        label = "Mixed recent results"
+    return score, label
+
+
+def _form_to_dict(f: TeamRecentForm) -> dict:
+    mom, mom_label = _form_momentum(f.sequence)
+    return {
+        "wins": f.wins,
+        "draws": f.draws,
+        "losses": f.losses,
+        "sequence": list(f.sequence),
+        "gf_per_game": f.gf_per_game,
+        "ga_per_game": f.ga_per_game,
+        "clean_sheet_rate": f.clean_sheet_rate,
+        "gd_per_game": f.gd_per_game,
+        "win_rate": f.win_rate,
+        "form_points": f.form_points,
+        "attack_efficiency": f.attack_efficiency,
+        "defensive_solidity": f.defensive_solidity,
+        "momentum": mom,
+        "momentum_label": mom_label,
+    }
+
+
+def _comparison_charts(home: TeamRecentForm, away: TeamRecentForm) -> list[dict]:
+    return [
+        {"key": "win_rate", "label": "Win Rate %", "home": home.win_rate * 100, "away": away.win_rate * 100, "fmt": "pct"},
+        {"key": "form_points", "label": "Form Points", "home": float(home.form_points), "away": float(away.form_points), "fmt": "num"},
+        {"key": "attack", "label": "Attack Efficiency", "home": home.attack_efficiency, "away": away.attack_efficiency, "fmt": "dec"},
+        {"key": "defence", "label": "Def. Solidity", "home": home.defensive_solidity, "away": away.defensive_solidity, "fmt": "dec"},
+    ]
+
+
+def _win_probability_block(home: str, away: str, p_home: float, p_draw: float, p_away: float) -> dict:
+    probs = {"home": p_home, "draw": p_draw, "away": p_away}
+    favorite = max(probs, key=probs.get)
+    fav_name = {"home": home, "draw": "Draw", "away": away}[favorite]
+    return {
+        "home": p_home,
+        "draw": p_draw,
+        "away": p_away,
+        "favorite": favorite,
+        "favorite_name": fav_name,
+        "favorite_prob": float(probs[favorite]),
+    }
 
 
 def score_heatmap(lam_home: float, lam_away: float, max_goals: int = 5) -> dict:
@@ -151,33 +234,20 @@ def fixture_insights(
     home_form = _recent_form(hist, home, n=recent_n)
     away_form = _recent_form(hist, away, n=recent_n)
 
+    conf = confidence_from_probs(p_home, p_draw, p_away)
     return {
         "home": home,
         "away": away,
         "xg": {"home": lam, "away": mu},
         "probs": {"home": p_home, "draw": p_draw, "away": p_away},
-        "confidence": confidence_from_probs(p_home, p_draw, p_away),
+        "win_probability": _win_probability_block(home, away, p_home, p_draw, p_away),
+        "confidence": conf,
         "form": {
             "recent_n": int(recent_n),
-            "home": {
-                "wins": home_form.wins,
-                "draws": home_form.draws,
-                "losses": home_form.losses,
-                "gf_per_game": home_form.gf_per_game,
-                "ga_per_game": home_form.ga_per_game,
-                "clean_sheet_rate": home_form.clean_sheet_rate,
-                "gd_per_game": home_form.gd_per_game,
-            },
-            "away": {
-                "wins": away_form.wins,
-                "draws": away_form.draws,
-                "losses": away_form.losses,
-                "gf_per_game": away_form.gf_per_game,
-                "ga_per_game": away_form.ga_per_game,
-                "clean_sheet_rate": away_form.clean_sheet_rate,
-                "gd_per_game": away_form.gd_per_game,
-            },
+            "home": _form_to_dict(home_form),
+            "away": _form_to_dict(away_form),
         },
+        "comparison_charts": _comparison_charts(home_form, away_form),
         "score_heatmap": score_heatmap(lam, mu, max_goals=5),
         "explanations": explain_match(home, away, home_form, away_form, lam, mu),
     }

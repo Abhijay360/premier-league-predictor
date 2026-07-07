@@ -59,9 +59,177 @@ function renderHeatmap(hm) {
   return html;
 }
 
+function polar(cx, cy, r, angleDeg) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+}
+
+function ringSlice(cx, cy, r, ir, start, end, color) {
+  if (end - start < 0.05) return '';
+  const large = end - start > 180 ? 1 : 0;
+  const p1 = polar(cx, cy, r, start);
+  const p2 = polar(cx, cy, r, end);
+  const p3 = polar(cx, cy, ir, end);
+  const p4 = polar(cx, cy, ir, start);
+  return `<path d="M ${p1.x.toFixed(2)} ${p1.y.toFixed(2)} A ${r} ${r} 0 ${large} 1 ${p2.x.toFixed(2)} ${p2.y.toFixed(2)} L ${p3.x.toFixed(2)} ${p3.y.toFixed(2)} A ${ir} ${ir} 0 ${large} 0 ${p4.x.toFixed(2)} ${p4.y.toFixed(2)} Z" fill="${color}" />`;
+}
+
+function renderDonut(wp, home, away) {
+  const pH = wp.home || 0;
+  const pD = wp.draw || 0;
+  const pA = wp.away || 0;
+  const cx = 88;
+  const cy = 88;
+  const r = 72;
+  const ir = 46;
+  let angle = -90;
+  const slices = [
+    { p: pH, color: '#3b82f6' },
+    { p: pD, color: '#ef4444' },
+    { p: pA, color: '#334155' },
+  ];
+  let paths = '';
+  for (const s of slices) {
+    const sweep = s.p * 360;
+    if (sweep > 0.2) {
+      paths += ringSlice(cx, cy, r, ir, angle, angle + sweep, s.color);
+    }
+    angle += sweep;
+  }
+  const favPct = ((wp.favorite_prob || 0) * 100).toFixed(1);
+  const favName = wp.favorite_name || home;
+  return `
+    <div class="donut-wrap">
+      <svg class="donut-svg" viewBox="0 0 176 176" aria-hidden="true">
+        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(148,163,184,0.12)" stroke-width="${r - ir}" />
+        ${paths}
+        <text x="${cx}" y="${cy - 4}" text-anchor="middle" class="donut-pct">${favPct}%</text>
+        <text x="${cx}" y="${cy + 16}" text-anchor="middle" class="donut-label">${favName}</text>
+      </svg>
+    </div>`;
+}
+
+function renderWinProbability(ins) {
+  const wp = ins.win_probability || ins.probs || {};
+  const probs = ins.probs || {};
+  const c = ins.confidence || {};
+  const gapPts = ((c.gap || 0) * 100).toFixed(1);
+  const favName = wp.favorite_name || ins.home;
+  const confClass = (c.label || '').toLowerCase().includes('high') ? 'high' : (c.label || '').toLowerCase().includes('medium') ? 'medium' : 'low';
+  const confFill = Math.min(100, Math.max(8, (c.gap || 0) * 100 * 2.2));
+
+  const tile = (label, val, sub, accent) => `
+    <div class="prob-tile${accent ? ' accent' : ''}">
+      <div class="prob-tile-head">${label}</div>
+      <div class="prob-tile-val">${val}</div>
+      <div class="prob-tile-sub muted">${sub}</div>
+    </div>`;
+
+  return `
+    <div class="section-label">Win probability</div>
+    <div class="win-prob-grid">
+      ${renderDonut(wp, ins.home, ins.away)}
+      <div class="prob-tiles">
+        ${tile(ins.home.toUpperCase(), pct(probs.home || wp.home || 0), 'chance of winning', wp.favorite === 'home')}
+        ${tile('DRAW', pct(probs.draw || wp.draw || 0), 'chance of draw', wp.favorite === 'draw')}
+        ${tile(ins.away.toUpperCase(), pct(probs.away || wp.away || 0), 'chance of winning', wp.favorite === 'away')}
+      </div>
+    </div>
+    <div class="confidence-card conf-${confClass}">
+      <div class="confidence-top">
+        <div>
+          <div class="confidence-title"><span class="conf-icon">🔒</span> ${c.label || 'Confidence'}</div>
+          <div class="confidence-detail muted">Model favors <strong>${favName}</strong> by ${gapPts} pts over the next most likely outcome.</div>
+        </div>
+        <span class="conf-pill">${gapPts} pt gap</span>
+      </div>
+      <div class="conf-bar"><div class="conf-bar-fill" style="width:${confFill.toFixed(1)}%"></div></div>
+    </div>`;
+}
+
+function renderCompareCharts(charts, home, away) {
+  if (!charts?.length) return '';
+  const blocks = charts.map((ch) => {
+    const max = Math.max(ch.home, ch.away, 0.01) * 1.15;
+    const hPct = Math.max(4, (ch.home / max) * 100);
+    const aPct = Math.max(4, (ch.away / max) * 100);
+    const fmtVal = (v) => {
+      if (ch.fmt === 'pct') return `${v.toFixed(0)}%`;
+      if (ch.fmt === 'dec') return v.toFixed(2);
+      return String(Math.round(v));
+    };
+    return `
+      <div class="compare-chart">
+        <div class="compare-chart-label">${ch.label}</div>
+        <div class="compare-bars">
+          <div class="compare-bar-col" title="${home}: ${fmtVal(ch.home)}">
+            <div class="compare-bar home" style="height:${hPct.toFixed(1)}%"></div>
+          </div>
+          <div class="compare-bar-col" title="${away}: ${fmtVal(ch.away)}">
+            <div class="compare-bar away" style="height:${aPct.toFixed(1)}%"></div>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+  return `
+    <div class="compare-head">
+      <div class="section-label">Form &amp; statistical comparison</div>
+      <div class="compare-legend"><span class="legend-dot home"></span>${home}<span class="legend-dot away"></span>${away}</div>
+    </div>
+    <div class="compare-charts">${blocks}</div>`;
+}
+
+function renderFormBadges(sequence) {
+  if (!sequence?.length) return '<span class="muted">No recent games</span>';
+  return sequence.map((r) => `<span class="form-badge ${r}">${r}</span>`).join('');
+}
+
+function renderFormDetailCard(team, f) {
+  const games = (f.wins || 0) + (f.draws || 0) + (f.losses || 0);
+  return `
+    <div class="form-detail-card">
+      <h3>${team}</h3>
+      <div class="form-badges">${renderFormBadges(f.sequence)}</div>
+      <div class="form-record">${f.wins || 0}W ${f.draws || 0}D ${f.losses || 0}L · ${games} games</div>
+      <div class="form-stats">
+        <div><span class="muted">Goals scored</span><strong>${fmt(f.gf_per_game, 2)}/game</strong></div>
+        <div><span class="muted">Conceded</span><strong>${fmt(f.ga_per_game, 2)}/game</strong></div>
+        <div><span class="muted">Clean sheet rate</span><strong>${((f.clean_sheet_rate || 0) * 100).toFixed(0)}%</strong></div>
+        <div><span class="muted">GD/game</span><strong>${f.gd_per_game >= 0 ? '+' : ''}${fmt(f.gd_per_game, 2)}</strong></div>
+      </div>
+    </div>`;
+}
+
+function renderFormMomentum(ins) {
+  const hf = ins.form?.home || {};
+  const af = ins.form?.away || {};
+  const row = (team, f) => {
+    const m = f.momentum || 0;
+    const left = 50 + m * 42;
+    const sign = m >= 0 ? '+' : '';
+    return `
+      <div class="momentum-row">
+        <div class="momentum-team">${team}</div>
+        <div class="momentum-track">
+          <span class="momentum-end muted">Low</span>
+          <div class="momentum-bar">
+            <div class="momentum-thumb" style="left:${left.toFixed(1)}%"></div>
+          </div>
+          <span class="momentum-end muted">High</span>
+        </div>
+        <div class="momentum-val">Neutral ${sign}${m.toFixed(2)}</div>
+        <div class="momentum-sub muted">${f.momentum_label || ''}</div>
+      </div>`;
+  };
+  return `
+    <div class="section-label">Form momentum</div>
+    <p class="momentum-desc muted">Form momentum scores each team's recent run of results weighted by recency — a positive score boosts their predicted attacking output in the simulation.</p>
+    ${row(ins.home, hf)}
+    ${row(ins.away, af)}`;
+}
+
 function renderInsights(ins) {
   if (!ins) return '<p class="empty-state">No insights available.</p>';
-  const c = ins.confidence || {};
   const xg = ins.xg || {};
   const form = ins.form || {};
   const hf = form.home || {};
@@ -69,6 +237,7 @@ function renderInsights(ins) {
   const exps = ins.explanations || [];
 
   const xgBar = `
+    <div class="section-label">Expected goals (xG)</div>
     <div class="xg-cards">
       <div class="xg-card">
         <div class="xg-label">${ins.home} xG</div>
@@ -85,27 +254,13 @@ function renderInsights(ins) {
     </div>
   `;
 
-  const formBlocks = `
-    <div class="grid-2">
-      <div class="mini-card">
-        <h3>${ins.home}</h3>
-        <div class="mini-metrics">
-          <div><span class="muted">W/D/L</span><strong>${hf.wins ?? 0}/${hf.draws ?? 0}/${hf.losses ?? 0}</strong></div>
-          <div><span class="muted">GF</span><strong>${fmt(hf.gf_per_game, 2)}/g</strong></div>
-          <div><span class="muted">GA</span><strong>${fmt(hf.ga_per_game, 2)}/g</strong></div>
-          <div><span class="muted">CS%</span><strong>${((hf.clean_sheet_rate || 0) * 100).toFixed(0)}%</strong></div>
-        </div>
-      </div>
-      <div class="mini-card">
-        <h3>${ins.away}</h3>
-        <div class="mini-metrics">
-          <div><span class="muted">W/D/L</span><strong>${af.wins ?? 0}/${af.draws ?? 0}/${af.losses ?? 0}</strong></div>
-          <div><span class="muted">GF</span><strong>${fmt(af.gf_per_game, 2)}/g</strong></div>
-          <div><span class="muted">GA</span><strong>${fmt(af.ga_per_game, 2)}/g</strong></div>
-          <div><span class="muted">CS%</span><strong>${((af.clean_sheet_rate || 0) * 100).toFixed(0)}%</strong></div>
-        </div>
-      </div>
+  const formSection = `
+    <div class="mt-sm">${renderCompareCharts(ins.comparison_charts, ins.home, ins.away)}</div>
+    <div class="grid-2 mt-sm">
+      ${renderFormDetailCard(ins.home, hf)}
+      ${renderFormDetailCard(ins.away, af)}
     </div>
+    <div class="mt-sm">${renderFormMomentum(ins)}</div>
   `;
 
   const expl = exps.length
@@ -121,10 +276,10 @@ function renderInsights(ins) {
   return `
     <div class="insights-head">
       <h2>Match Insights</h2>
-      <div class="confidence">${c.label || '—'} · ${(100*(c.top_prob||0)).toFixed(1)}% top outcome · ${(100*(c.gap||0)).toFixed(1)} pt gap</div>
     </div>
+    ${renderWinProbability(ins)}
     ${xgBar}
-    <div class="mt-sm"><h3>Recent form (last ${form.recent_n || 5})</h3>${formBlocks}</div>
+    <div class="mt-sm"><h3>Recent form (last ${form.recent_n || 5})</h3>${formSection}</div>
     <div class="mt-sm">${renderHeatmap(ins.score_heatmap)}</div>
     <div class="mt-sm"><h3>Why the model predicted this</h3>${expl}</div>
   `;
