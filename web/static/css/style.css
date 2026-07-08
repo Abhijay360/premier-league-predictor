@@ -495,6 +495,50 @@ body {
 .heatmap-grid { display:grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
 .heatmap-cell { border-radius: 10px; padding: 0.6rem 0.4rem; text-align:center; font-weight: 700; font-size: 0.75rem; border: 1px solid rgba(148,163,184,0.12); }
 
+/* Head-to-head */
+.h2h-head { display:flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; margin-bottom: 0.65rem; }
+.h2h-head .small { font-size: 0.78rem; }
+.h2h-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.55rem 0.75rem;
+  background: var(--surface-2);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.h2h-sum-item { display:flex; justify-content: space-between; gap: 0.65rem; font-size: 0.85rem; }
+.h2h-sum-item strong { font-weight: 800; }
+.h2h-list { display:flex; flex-direction: column; gap: 0.45rem; }
+.h2h-row {
+  background: var(--surface-2);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 12px;
+  padding: 0.65rem 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 160px 72px;
+  gap: 0.75rem;
+  align-items: center;
+}
+.h2h-left { display:flex; align-items: center; gap: 0.6rem; min-width: 0; }
+.h2h-teams { font-weight: 700; font-size: 0.88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.h2h-mid { font-size: 0.82rem; text-align: right; }
+.h2h-score { font-weight: 900; text-align: right; letter-spacing: 0.02em; }
+.h2h-chip {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+.h2h-chip.W { background: rgba(34,197,94,0.2); color: var(--green); }
+.h2h-chip.D { background: rgba(148,163,184,0.2); color: var(--draw); }
+.h2h-chip.L { background: rgba(239,68,68,0.15); color: var(--red); }
+
 .explain-list { display:flex; flex-direction: column; gap: 0.65rem; }
 .explain-row { background: var(--surface-2); border: 1px solid rgba(148,163,184,0.15); border-radius: 12px; padding: 0.85rem 0.95rem; display:grid; grid-template-columns: 170px 1fr; gap: 0.25rem 0.75rem; }
 .explain-title { font-weight: 800; }

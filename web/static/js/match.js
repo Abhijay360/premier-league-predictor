@@ -228,6 +228,51 @@ function renderFormMomentum(ins) {
     ${row(ins.away, af)}`;
 }
 
+function renderH2H(ins) {
+  const h2h = ins.h2h || {};
+  const summary = h2h.summary || {};
+  const matches = h2h.matches || [];
+  const n = h2h.n || matches.length || 8;
+
+  const sumRow = summary.games
+    ? `<div class="h2h-summary">
+        <div class="h2h-sum-item"><span class="muted">Record</span><strong>${summary.home_wins}W ${summary.draws}D ${summary.away_wins}L</strong></div>
+        <div class="h2h-sum-item"><span class="muted">GF</span><strong>${fmt(summary.gf_per_game, 2)}/g</strong></div>
+        <div class="h2h-sum-item"><span class="muted">GA</span><strong>${fmt(summary.ga_per_game, 2)}/g</strong></div>
+        <div class="h2h-sum-item"><span class="muted">BTTS</span><strong>${((summary.btts_rate || 0) * 100).toFixed(0)}%</strong></div>
+        <div class="h2h-sum-item"><span class="muted">CS%</span><strong>${((summary.clean_sheet_rate || 0) * 100).toFixed(0)}%</strong></div>
+      </div>`
+    : `<p class="muted">No recent head-to-head matches in the training data.</p>`;
+
+  const chip = (r) => `<span class="h2h-chip ${r}">${r}</span>`;
+
+  const list = matches.length
+    ? `<div class="h2h-list">
+        ${matches.map((m) => `
+          <div class="h2h-row">
+            <div class="h2h-left">
+              ${chip(m.result_for_home)}
+              <div class="h2h-teams">${m.home_team} <span class="muted">vs</span> ${m.away_team}</div>
+            </div>
+            <div class="h2h-mid muted">${m.date || '—'}</div>
+            <div class="h2h-score">${m.score || '—'}</div>
+          </div>
+        `).join('')}
+      </div>`
+    : '';
+
+  return `
+    <div class="mt-sm">
+      <div class="h2h-head">
+        <h3>Head-to-head (last ${n})</h3>
+        <div class="muted small">${ins.home} perspective</div>
+      </div>
+      ${sumRow}
+      ${list}
+    </div>
+  `;
+}
+
 function renderInsights(ins) {
   if (!ins) return '<p class="empty-state">No insights available.</p>';
   const xg = ins.xg || {};
@@ -280,6 +325,7 @@ function renderInsights(ins) {
     ${renderWinProbability(ins)}
     ${xgBar}
     <div class="mt-sm"><h3>Recent form (last ${form.recent_n || 5})</h3>${formSection}</div>
+    ${renderH2H(ins)}
     <div class="mt-sm">${renderHeatmap(ins.score_heatmap)}</div>
     <div class="mt-sm"><h3>Why the model predicted this</h3>${expl}</div>
   `;

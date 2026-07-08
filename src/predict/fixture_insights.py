@@ -162,6 +162,94 @@ def _win_probability_block(home: str, away: str, p_home: float, p_draw: float, p
     }
 
 
+def _h2h(hist: pd.DataFrame, home: str, away: str, n: int = 5) -> dict:
+    """Head-to-head from the perspective of `home` in this fixture."""
+    played = hist.dropna(subset=["FTHG", "FTAG", "FTR"]).copy()
+    mask = ((played["HomeTeam"] == home) & (played["AwayTeam"] == away)) | (
+        (played["HomeTeam"] == away) & (played["AwayTeam"] == home)
+    )
+    df = played[mask].sort_values("Date").tail(n).reset_index(drop=True)
+    if df.empty:
+        return {
+            "n": int(n),
+            "matches": [],
+            "summary": {
+                "games": 0,
+                "home_wins": 0,
+                "draws": 0,
+                "away_wins": 0,
+                "gf_per_game": 0.0,
+                "ga_per_game": 0.0,
+                "btts_rate": 0.0,
+                "clean_sheet_rate": 0.0,
+            },
+        }
+
+    matches: list[dict] = []
+    w = d = l = 0
+    gf_total = ga_total = 0
+    btts = cs = 0
+
+    for _, r in df.iterrows():
+        ht = str(r["HomeTeam"])
+        at = str(r["AwayTeam"])
+        fthg = int(r["FTHG"])
+        ftag = int(r["FTAG"])
+        date = r["Date"]
+        date_str = pd.Timestamp(date).strftime("%Y-%m-%d") if pd.notna(date) else ""
+
+        if ht == home:
+            gf, ga = fthg, ftag
+        else:
+            gf, ga = ftag, fthg
+
+        if gf > ga:
+            res = "W"
+            w += 1
+        elif gf < ga:
+            res = "L"
+            l += 1
+        else:
+            res = "D"
+            d += 1
+
+        gf_total += gf
+        ga_total += ga
+        if fthg > 0 and ftag > 0:
+            btts += 1
+        if ga == 0:
+            cs += 1
+
+        matches.append(
+            {
+                "date": date_str,
+                "season": str(r.get("season") or ""),
+                "home_team": ht,
+                "away_team": at,
+                "score": f"{fthg}–{ftag}",
+                "result_for_home": res,
+                "gf_for_home": int(gf),
+                "ga_for_home": int(ga),
+            }
+        )
+
+    games = int(len(matches))
+    return {
+        "n": int(n),
+        "matches": matches[::-1],  # newest first for the UI
+        "summary": {
+            "games": games,
+            "home_wins": int(w),
+            "draws": int(d),
+            "away_wins": int(l),
+            "gf_per_game": float(gf_total / games) if games else 0.0,
+            "ga_per_game": float(ga_total / games) if games else 0.0,
+            "btts_rate": float(btts / games) if games else 0.0,
+            "clean_sheet_rate": float(cs / games) if games else 0.0,
+        },
+    }
+
+
 def score_heatmap(lam_home: float, lam_away: float, max_goals: int = 5) -> dict:
     """Return scoreline probability grid for 0..max_goals goals each."""
     h = np.arange(max_goals + 1)
@@ -233,6 +321,7 @@ def fixture_insights(
     hist = load_raw_seasons(TRAIN_SEASONS)
     home_form = _recent_form(hist, home, n=recent_n)
     away_form = _recent_form(hist, away, n=recent_n)
+    h2h = _h2h(hist, home, away, n=8)
 
     conf = confidence_from_probs(p_home, p_draw, p_away)
     return {
@@ -247,6 +336,7 @@ def fixture_insights(
             "home": _form_to_dict(home_form),
             "away": _form_to_dict(away_form),
         },
+        "h2h": h2h,
         "comparison_charts": _comparison_charts(home_form, away_form),
         "score_heatmap": score_heatmap(lam, mu, max_goals=5),
         "explanations": explain_match(home, away, home_form, away_form, lam, mu),
