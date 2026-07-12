@@ -57,6 +57,29 @@ def _conditional_expectation(
     return sum_h / total_p, sum_a / total_p
 
 
+def expected_scoreline_conditional(
+    lam_home: float,
+    lam_away: float,
+    outcome: str,
+    max_g: int = 8,
+) -> tuple[int, int]:
+    """
+    Integer scoreline from conditional expected goals given H/D/A.
+
+    The Poisson *mode* almost never exceeds 2 goals per team even when xG is
+    high (3-0 is less likely than 2-0). Rounding E[goals | outcome] fixes that.
+    """
+    eh, ea = _conditional_expectation(lam_home, lam_away, outcome, max_g)
+    h = int(round(eh))
+    a = int(round(ea))
+    # Rare 4-goal displays for very dominant matchups (xG gap >= ~1.8)
+    if outcome == "H" and lam_home >= 2.85 and (lam_home - lam_away) >= 1.75 and eh >= 3.15:
+        h = max(h, 4)
+    elif outcome == "A" and lam_away >= 2.85 and (lam_away - lam_home) >= 1.75 and ea >= 3.15:
+        a = max(a, 4)
+    return _enforce_outcome(h, a, outcome)
+
+
 def modal_scoreline_conditional(
     lam_home: float,
     lam_away: float,
@@ -128,4 +151,4 @@ def predict_scoreline(
 
     lam_home, lam_away = _expected_lambdas(home_avg_gf, away_avg_gf, home_avg_ga, away_avg_ga)
     pred = outcome or most_likely_outcome(p_home, p_draw, p_away)
-    return modal_scoreline_conditional(lam_home, lam_away, pred)
+    return expected_scoreline_conditional(lam_home, lam_away, pred)

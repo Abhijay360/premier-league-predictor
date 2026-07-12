@@ -11,7 +11,7 @@ from src.config import PREDICT_SEASON, TRAIN_SEASONS, get_paths
 from src.dataio import load_raw_seasons, save_parquet
 from src.predict.advanced_simulator import AdvancedFootballSimulator
 from src.predict.pl_simulator_seed import PremierLeagueSimulatorSeed
-from src.predict.scoreline import modal_scoreline_conditional
+from src.predict.scoreline import expected_scoreline_conditional
 from src.teams_meta import team_info, team_stadium
 
 
@@ -24,7 +24,7 @@ def _scoreline_from_rates(
     mu: float,
     outcome: str,
 ) -> tuple[int, int]:
-    return modal_scoreline_conditional(lam, mu, outcome)
+    return expected_scoreline_conditional(lam, mu, outcome)
 
 
 def simulate_season_advanced(
