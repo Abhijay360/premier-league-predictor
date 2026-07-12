@@ -228,8 +228,69 @@ function renderFormMomentum(ins) {
     ${row(ins.away, af)}`;
 }
 
+function renderTeamRadar(ins) {
+  const radar = ins.team_radar || {};
+  const axes = radar.axes || [];
+  if (!axes.length) return '';
+
+  const cx = 210;
+  const cy = 210;
+  const R = 118;
+  const labelR = R + 34;
+  const n = axes.length;
+
+  const pt = (idx, norm) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI * idx) / n;
+    const r = R * Math.max(0, Math.min(1, norm || 0));
+    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
+  };
+
+  const poly = (side) => {
+    const pts = axes.map((ax, i) => pt(i, ax[`${side}_norm`]));
+    return `${pts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ')}`;
+  };
+
+  const rings = [0.25, 0.5, 0.75, 1.0].map((level) => {
+    const pts = Array.from({ length: n }, (_, i) => pt(i, level));
+    return `<polygon class="radar-ring" points="${pts.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ')}" />`;
+  }).join('');
+
+  const spokes = axes.map((_, i) => {
+    const end = pt(i, 1);
+    return `<line class="radar-spoke" x1="${cx}" y1="${cy}" x2="${end.x.toFixed(1)}" y2="${end.y.toFixed(1)}" />`;
+  }).join('');
+
+  const labels = axes.map((ax, i) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI * i) / n;
+    const x = cx + labelR * Math.cos(angle);
+    const y = cy + labelR * Math.sin(angle);
+    const anchor = Math.abs(Math.cos(angle)) < 0.2 ? 'middle' : (Math.cos(angle) > 0 ? 'start' : 'end');
+    return `<text class="radar-label" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${anchor}" dominant-baseline="middle">${ax.label}</text>`;
+  }).join('');
+
+  return `
+    <div class="mt-sm radar-card">
+      <div class="section-label">Team comparison radar</div>
+      <p class="radar-desc muted">Six key stats side by side — a bigger, more filled-out shape means a stronger all-around team. Notice when <strong>Raw Goals/Game</strong> sits further out than <strong>xG</strong>: that can mean some scoring came against weaker opposition.</p>
+      <div class="radar-wrap">
+        <svg class="radar-svg" viewBox="0 0 420 420" aria-label="Team comparison radar chart">
+          ${rings}
+          ${spokes}
+          <polygon class="radar-fill away" points="${poly('away')}" />
+          <polygon class="radar-fill home" points="${poly('home')}" />
+          <polygon class="radar-stroke away" points="${poly('away')}" />
+          <polygon class="radar-stroke home" points="${poly('home')}" />
+          ${labels}
+        </svg>
+        <div class="radar-legend">
+          <span><span class="legend-dot home"></span>${ins.home}</span>
+          <span><span class="legend-dot away"></span>${ins.away}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
 function renderH2H(ins) {
-  const h2h = ins.h2h || {};
   const summary = h2h.summary || {};
   const matches = h2h.matches || [];
   const n = h2h.n || matches.length || 8;
@@ -325,6 +386,7 @@ function renderInsights(ins) {
     ${renderWinProbability(ins)}
     ${xgBar}
     <div class="mt-sm"><h3>Recent form (last ${form.recent_n || 5})</h3>${formSection}</div>
+    ${renderTeamRadar(ins)}
     ${renderH2H(ins)}
     <div class="mt-sm">${renderHeatmap(ins.score_heatmap)}</div>
     <div class="mt-sm"><h3>Why the model predicted this</h3>${expl}</div>

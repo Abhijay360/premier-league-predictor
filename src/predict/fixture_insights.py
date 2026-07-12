@@ -250,6 +250,37 @@ def _h2h(hist: pd.DataFrame, home: str, away: str, n: int = 5) -> dict:
     }
 
 
+def _norm_axis(value: float, lo: float, hi: float) -> float:
+    if hi <= lo:
+        return 0.0
+    return float(np.clip((value - lo) / (hi - lo), 0.0, 1.0))
+
+
+def _team_radar(home_form: TeamRecentForm, away_form: TeamRecentForm, lam: float, mu: float) -> dict:
+    """Six-axis team comparison for the radar chart."""
+    mom_h, _ = _form_momentum(home_form.sequence)
+    mom_a, _ = _form_momentum(away_form.sequence)
+    axis_defs = [
+        ("raw_goals", "Raw Goals/Game", home_form.gf_per_game, away_form.gf_per_game, 0.0, 3.5),
+        ("xg", "xG", lam, mu, 0.0, 3.2),
+        ("momentum", "Form Momentum", (mom_h + 1.0) / 2.0, (mom_a + 1.0) / 2.0, 0.0, 1.0),
+        ("gd", "Goal Diff/Game", home_form.gd_per_game, away_form.gd_per_game, -1.5, 2.5),
+        ("cs", "Clean Sheet Rate", home_form.clean_sheet_rate, away_form.clean_sheet_rate, 0.0, 1.0),
+        ("defence", "Defensive Solidity", home_form.defensive_solidity, away_form.defensive_solidity, 3.0, 10.0),
+    ]
+    axes = []
+    for key, label, home_val, away_val, lo, hi in axis_defs:
+        axes.append({
+            "key": key,
+            "label": label,
+            "home": float(home_val),
+            "away": float(away_val),
+            "home_norm": _norm_axis(float(home_val), lo, hi),
+            "away_norm": _norm_axis(float(away_val), lo, hi),
+        })
+    return {"axes": axes}
+
+
 def score_heatmap(lam_home: float, lam_away: float, max_goals: int = 5) -> dict:
     """Return scoreline probability grid for 0..max_goals goals each."""
     h = np.arange(max_goals + 1)
@@ -337,6 +368,7 @@ def fixture_insights(
             "away": _form_to_dict(away_form),
         },
         "h2h": h2h,
+        "team_radar": _team_radar(home_form, away_form, lam, mu),
         "comparison_charts": _comparison_charts(home_form, away_form),
         "score_heatmap": score_heatmap(lam, mu, max_goals=5),
         "explanations": explain_match(home, away, home_form, away_form, lam, mu),
