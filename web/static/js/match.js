@@ -291,6 +291,7 @@ function renderTeamRadar(ins) {
 }
 
 function renderH2H(ins) {
+  const h2h = ins.h2h || {};
   const summary = h2h.summary || {};
   const matches = h2h.matches || [];
   const n = h2h.n || matches.length || 8;
