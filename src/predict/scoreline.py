@@ -57,23 +57,65 @@ def _conditional_expectation(
     return sum_h / total_p, sum_a / total_p
 
 
-def _round_winner_goals(e: float) -> int:
-    return max(1, int(round(e)))
+def _best_scoreline_near_expectation(
+    lam_home: float,
+    lam_away: float,
+    outcome: str,
+    max_g: int = 8,
+) -> tuple[int, int]:
+    """Pick the most likely scoreline near conditional xG (allows 2–0, 3–0, 3–1, etc.)."""
+    eh, ea = _conditional_expectation(lam_home, lam_away, outcome, max_g)
 
+    if outcome == "D":
+        best_g, best_p = 0, -1.0
+        for g in range(max_g):
+            p = _poisson_pmf(g, lam_home) * _poisson_pmf(g, lam_away)
+            if p > best_p:
+                best_g, best_p = g, p
+        if best_g == 0 and best_p < 0.02:
+            best_g = 1
+        return best_g, best_g
 
-def _round_loser_goals(e: float, lam: float) -> int:
-    """Allow clean sheets when the losing side's conditional xG is low."""
-    if e < 0.40:
-        return 0
-    if e < 0.72:
-        return 0 if _poisson_pmf(0, lam) >= _poisson_pmf(1, lam) else 1
-    return max(0, int(round(e)))
+    if outcome == "H":
+        h_lo = max(1, int(eh - 0.5))
+        h_hi = min(max_g, int(eh + 1.5))
+        h_opts = list(range(h_lo, h_hi + 1))
+        if lam_home >= 2.85 and (lam_home - lam_away) >= 1.75 and eh >= 3.15:
+            if 4 not in h_opts:
+                h_opts.append(4)
+        a_opts = sorted({0, 1, max(0, int(round(ea)))})
+    else:
+        a_lo = max(1, int(ea - 0.5))
+        a_hi = min(max_g, int(ea + 1.5))
+        a_opts = list(range(a_lo, a_hi + 1))
+        if lam_away >= 2.85 and (lam_away - lam_home) >= 1.75 and ea >= 3.15:
+            if 4 not in a_opts:
+                a_opts.append(4)
+        h_opts = sorted({0, 1, max(0, int(round(eh)))})
 
+    best_h, best_a, best_p = 1, 0, -1.0
+    for h in h_opts:
+        for a in a_opts:
+            if outcome == "H" and h <= a:
+                continue
+            if outcome == "A" and a <= h:
+                continue
+            p = _poisson_pmf(h, lam_home) * _poisson_pmf(a, lam_away)
+            winner_e = eh if outcome == "H" else ea
+            if p > best_p + 1e-12:
+                best_h, best_a, best_p = h, a, p
+            elif p >= best_p * 0.92:
+                # Close Poisson ties — nudge using conditional xG
+                if outcome == "H" and winner_e >= 2.85 and h > best_h:
+                    best_h, best_a, best_p = h, a, p
+                elif outcome == "H" and winner_e < 2.85 and a < best_a:
+                    best_h, best_a, best_p = h, a, p
+                elif outcome == "A" and winner_e >= 2.85 and a > best_a:
+                    best_h, best_a, best_p = h, a, p
+                elif outcome == "A" and winner_e < 2.85 and h < best_h:
+                    best_h, best_a, best_p = h, a, p
 
-def _round_draw_goals(e: float) -> int:
-    if e < 0.35:
-        return 0
-    return max(0, int(round(e)))
+    return _enforce_outcome(best_h, best_a, outcome)
 
 
 def expected_scoreline_conditional(
@@ -85,29 +127,10 @@ def expected_scoreline_conditional(
     """
     Integer scoreline from conditional expected goals given H/D/A.
 
-    Winner goals use rounded expectation (allows 3–4 goal displays).
-    Loser goals use a lower threshold so clean sheets (2–0, 3–0) remain possible.
+    Chooses the most likely nearby scoreline so we get 2–0, 3–0, 3–1, and 4–0
+  when Poisson mass supports them — not only rounded expectations.
     """
-    eh, ea = _conditional_expectation(lam_home, lam_away, outcome, max_g)
-
-    if outcome == "H":
-        h = _round_winner_goals(eh)
-        a = _round_loser_goals(ea, lam_away)
-        if lam_home >= 2.85 and (lam_home - lam_away) >= 1.75 and eh >= 3.15:
-            h = max(h, 4)
-    elif outcome == "A":
-        h = _round_loser_goals(eh, lam_home)
-        a = _round_winner_goals(ea)
-        if lam_away >= 2.85 and (lam_away - lam_home) >= 1.75 and ea >= 3.15:
-            a = max(a, 4)
-    else:
-        h = _round_draw_goals(eh)
-        a = _round_draw_goals(ea)
-        if h != a:
-            m = max(h, a, 1) if max(eh, ea) >= 0.75 else max(h, a)
-            h = a = m
-
-    return _enforce_outcome(h, a, outcome)
+    return _best_scoreline_near_expectation(lam_home, lam_away, outcome, max_g)
 
 
 def modal_scoreline_conditional(
