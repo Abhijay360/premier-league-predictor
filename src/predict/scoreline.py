@@ -57,6 +57,25 @@ def _conditional_expectation(
     return sum_h / total_p, sum_a / total_p
 
 
+def _round_winner_goals(e: float) -> int:
+    return max(1, int(round(e)))
+
+
+def _round_loser_goals(e: float, lam: float) -> int:
+    """Allow clean sheets when the losing side's conditional xG is low."""
+    if e < 0.40:
+        return 0
+    if e < 0.72:
+        return 0 if _poisson_pmf(0, lam) >= _poisson_pmf(1, lam) else 1
+    return max(0, int(round(e)))
+
+
+def _round_draw_goals(e: float) -> int:
+    if e < 0.35:
+        return 0
+    return max(0, int(round(e)))
+
+
 def expected_scoreline_conditional(
     lam_home: float,
     lam_away: float,
@@ -66,17 +85,28 @@ def expected_scoreline_conditional(
     """
     Integer scoreline from conditional expected goals given H/D/A.
 
-    The Poisson *mode* almost never exceeds 2 goals per team even when xG is
-    high (3-0 is less likely than 2-0). Rounding E[goals | outcome] fixes that.
+    Winner goals use rounded expectation (allows 3–4 goal displays).
+    Loser goals use a lower threshold so clean sheets (2–0, 3–0) remain possible.
     """
     eh, ea = _conditional_expectation(lam_home, lam_away, outcome, max_g)
-    h = int(round(eh))
-    a = int(round(ea))
-    # Rare 4-goal displays for very dominant matchups (xG gap >= ~1.8)
-    if outcome == "H" and lam_home >= 2.85 and (lam_home - lam_away) >= 1.75 and eh >= 3.15:
-        h = max(h, 4)
-    elif outcome == "A" and lam_away >= 2.85 and (lam_away - lam_home) >= 1.75 and ea >= 3.15:
-        a = max(a, 4)
+
+    if outcome == "H":
+        h = _round_winner_goals(eh)
+        a = _round_loser_goals(ea, lam_away)
+        if lam_home >= 2.85 and (lam_home - lam_away) >= 1.75 and eh >= 3.15:
+            h = max(h, 4)
+    elif outcome == "A":
+        h = _round_loser_goals(eh, lam_home)
+        a = _round_winner_goals(ea)
+        if lam_away >= 2.85 and (lam_away - lam_home) >= 1.75 and ea >= 3.15:
+            a = max(a, 4)
+    else:
+        h = _round_draw_goals(eh)
+        a = _round_draw_goals(ea)
+        if h != a:
+            m = max(h, a, 1) if max(eh, ea) >= 0.75 else max(h, a)
+            h = a = m
+
     return _enforce_outcome(h, a, outcome)
 
 
