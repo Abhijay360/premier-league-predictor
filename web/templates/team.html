@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Profile · Premier League Predictor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero hero-compact">
+      <div class="hero-inner">
+        <a href="/" class="back-link">← Back to dashboard</a>
+        <div class="match-search-wrap match-search-compact" data-match-search>
+          <input class="match-search-input" type="search" placeholder="Search another match…" autocomplete="off" spellcheck="false" aria-expanded="false" />
+          <div class="match-search-dropdown hidden" role="listbox"></div>
+        </div>
+        <div id="team-hero" class="profile-hero"></div>
+      </div>
+    </header>
+    <main class="content">
+      <div id="team-content"></div>
+    </main>
+  </div>
+  <script src="/static/js/search.js"></script>
+  <script src="/static/js/team.js"></script>
+</body>
+</html>

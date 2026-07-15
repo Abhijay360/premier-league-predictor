@@ -62,6 +62,14 @@ function logoImg(src, className = 'team-logo') {
   return `<img class="${className}" src="${url}" alt="" loading="lazy" onerror="this.onerror=null;this.src='/static/logos/default.png'" />`;
 }
 
+function teamPageUrl(team) {
+  return `/team?team=${encodeURIComponent(team)}`;
+}
+
+function logoLinkTeam(src, team, className = 'team-logo') {
+  return `<a href="${teamPageUrl(team)}" class="team-logo-link" title="View ${team}">${logoImg(src, className)}</a>`;
+}
+
 function renderFixtureCard(m) {
   const date = m.Date ? new Date(m.Date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }) : '—';
   const home = teamMeta(m.HomeTeam);
@@ -81,7 +89,7 @@ function renderFixtureCard(m) {
   const matchUrl = `/match?home=${encodeURIComponent(m.HomeTeam)}&away=${encodeURIComponent(m.AwayTeam)}&date=${encodeURIComponent(m.Date || '')}`;
 
   return `
-    <a class="fixture-card fixture-link" href="${matchUrl}">
+    <div class="fixture-card" data-href="${matchUrl}" role="link" tabindex="0">
       ${stadiumHtml}
       <div class="fixture-body">
         <div class="fixture-top">
@@ -90,21 +98,37 @@ function renderFixtureCard(m) {
         </div>
         <div class="fixture-matchup">
           <div class="team-side home">
-            ${logoImg(homeLogo)}
-            <span class="team-name">${m.HomeTeam}</span>
+            ${logoLinkTeam(homeLogo, m.HomeTeam)}
+            <a class="team-name team-name-link" href="${teamPageUrl(m.HomeTeam)}">${m.HomeTeam}</a>
           </div>
           <div class="score-center">
             <div class="pred-score">${score}</div>
             <div class="score-label">Predicted score</div>
           </div>
           <div class="team-side away">
-            ${logoImg(awayLogo)}
-            <span class="team-name">${m.AwayTeam}</span>
+            ${logoLinkTeam(awayLogo, m.AwayTeam)}
+            <a class="team-name team-name-link" href="${teamPageUrl(m.AwayTeam)}">${m.AwayTeam}</a>
           </div>
         </div>
         ${renderProbBars(m.p_home, m.p_draw, m.p_away)}
       </div>
-    </a>`;
+    </div>`;
+}
+
+function bindFixtureCards(root = document) {
+  root.querySelectorAll('.fixture-card[data-href]').forEach((card) => {
+    const go = () => { window.location.href = card.dataset.href; };
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      go();
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        go();
+      }
+    });
+  });
 }
 
 function renderTrainingManifest(manifest) {
@@ -200,7 +224,7 @@ function renderStandings(rows) {
     return `
     <tr class="pos-${r.position <= 4 ? r.position : ''}">
       <td>${r.position}</td>
-      <td class="team-cell">${logoImg(meta.logo, 'team-logo-sm')}<span>${r.team}</span></td>
+      <td class="team-cell">${logoImg(meta.logo, 'team-logo-sm')}<a class="team-name-link" href="${teamPageUrl(r.team)}">${r.team}</a></td>
       <td>${r.played}</td>
       <td>${r.won}</td>
       <td>${r.drawn}</td>
@@ -255,6 +279,7 @@ function renderUpcomingList(upcoming, seasonLabel) {
   $('#all-predictions').innerHTML = upcoming.length
     ? `<div class="limit-banner">Score predictions use a Poisson model from team scoring rates. Squad market value and net transfer spend from Transfermarkt nudge team strength for ${seasonLabel}.</div>${upcoming.map(renderFixtureCard).join('')}`
     : '<p class="empty-state">No matches match your filter.</p>';
+  bindFixtureCards($('#all-predictions'));
 }
 
 function setupFixtureFilter(seasonLabel) {
@@ -308,6 +333,7 @@ async function load() {
     $('#next-fixtures').innerHTML = next5.length
       ? next5.map(renderFixtureCard).join('')
       : '<p class="empty-state">No upcoming fixtures. Re-run the pipeline to refresh.</p>';
+    bindFixtureCards($('#next-fixtures'));
 
     renderUpcomingList(upcoming, seasonLabel);
     setupFixtureFilter(seasonLabel);

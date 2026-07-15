@@ -13,29 +13,43 @@ function logoImg(src) {
   return `<img class="team-logo" src="${url}" alt="" onerror="this.onerror=null;this.src='/static/logos/default.png'" />`;
 }
 
-function resolveStadiumImg(fixture, homeMeta) {
-  const local = homeMeta.stadium_image || '';
-  const stored = fixture.stadium_image || '';
-  if (local.startsWith('/static/')) return local;
-  if (stored.startsWith('/static/')) return stored;
-  return local || stored;
+function teamUrl(team) {
+  return `/team?team=${encodeURIComponent(team)}`;
 }
 
-function renderPlayers(players) {
+function playerUrl(team, name) {
+  return `/player?team=${encodeURIComponent(team)}&name=${encodeURIComponent(name)}`;
+}
+
+function logoLink(src, team) {
+  return `<a href="${teamUrl(team)}" class="team-logo-link" title="${team}">${logoImg(src)}</a>`;
+}
+
+function renderPlayers(players, team) {
   if (!players?.length) return '<p class="muted">Squad data not available. Re-run the pipeline to refresh.</p>';
-  // Deduplicate by name (keep richest row)
   const byName = new Map();
   for (const p of players) {
     const prev = byName.get(p.name);
     if (!prev || (p.market_value_m || 0) > (prev.market_value_m || 0)) byName.set(p.name, p);
   }
   const unique = [...byName.values()].sort((a, b) => (b.market_value_m || 0) - (a.market_value_m || 0));
-  let html = '<div class="table-wrap"><table class="standings-table"><thead><tr><th>Player</th><th>Pos</th><th>Age</th><th>Value</th></tr></thead><tbody>';
+  let html = '<div class="table-wrap"><table class="standings-table squad-click-table"><thead><tr><th>Player</th><th>Pos</th><th>Age</th><th>Value</th></tr></thead><tbody>';
   for (const p of unique) {
-    html += `<tr><td>${p.name}</td><td>${p.position || '—'}</td><td>${p.age || '—'}</td><td>${p.market_value_m ? `€${p.market_value_m.toFixed(1)}m` : '—'}</td></tr>`;
+    const face = p.tm_player_id
+      ? `<img class="player-face-sm" src="https://tmssl.akamaized.net/images/portrait/header/${p.tm_player_id}.png" alt="" loading="lazy" onerror="this.style.display='none'" />`
+      : '';
+    html += `<tr class="clickable-row" data-href="${playerUrl(team, p.name)}"><td>${face}${p.name}</td><td>${p.position || '—'}</td><td>${p.age || '—'}</td><td>${p.market_value_m ? `€${p.market_value_m.toFixed(1)}m` : '—'}</td></tr>`;
   }
   html += '</tbody></table></div>';
   return html;
+}
+
+function resolveStadiumImg(fixture, homeMeta) {
+  const local = homeMeta.stadium_image || '';
+  const stored = fixture.stadium_image || '';
+  if (local.startsWith('/static/')) return local;
+  if (stored.startsWith('/static/')) return stored;
+  return local || stored;
 }
 
 function fmt(n, digits = 2) {
@@ -428,9 +442,9 @@ async function load() {
     ${stadiumBanner}
     <div class="fixture-body">
       <div class="fixture-matchup">
-        <div class="team-side home">${logoImg(fixture.home_logo || homeMeta.logo)}<span class="team-name">${home}</span></div>
+        <div class="team-side home">${logoLink(fixture.home_logo || homeMeta.logo, home)}<a class="team-name team-name-link" href="${teamUrl(home)}">${home}</a></div>
         <div class="score-center"><div class="pred-score">${fixture.pred_score || '—'}</div><div class="score-label">Predicted score</div></div>
-        <div class="team-side away">${logoImg(fixture.away_logo || awayMeta.logo)}<span class="team-name">${away}</span></div>
+        <div class="team-side away">${logoLink(fixture.away_logo || awayMeta.logo, away)}<a class="team-name team-name-link" href="${teamUrl(away)}">${away}</a></div>
       </div>
       <p style="text-align:center;margin:0.75rem 0;color:var(--muted);font-size:0.85rem">
         Home ${pct(fixture.p_home)} · Draw ${pct(fixture.p_draw)} · Away ${pct(fixture.p_away)}
@@ -439,8 +453,12 @@ async function load() {
 
   document.getElementById('home-squad-title').textContent = `${home} Squad`;
   document.getElementById('away-squad-title').textContent = `${away} Squad`;
-  document.getElementById('home-squad').innerHTML = renderPlayers(homeSquad.players);
-  document.getElementById('away-squad').innerHTML = renderPlayers(awaySquad.players);
+  document.getElementById('home-squad').innerHTML = renderPlayers(homeSquad.players, home);
+  document.getElementById('away-squad').innerHTML = renderPlayers(awaySquad.players, away);
+
+  document.querySelectorAll('.clickable-row[data-href]').forEach((row) => {
+    row.addEventListener('click', () => { window.location.href = row.dataset.href; });
+  });
 
   const insightsEl = document.getElementById('match-insights');
   if (insightsEl) insightsEl.innerHTML = renderInsights(insights);

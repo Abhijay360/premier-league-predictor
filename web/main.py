@@ -136,6 +136,16 @@ def match_page() -> FileResponse:
     return FileResponse(WEB_DIR / "templates" / "match.html")
 
 
+@app.get("/team")
+def team_page() -> FileResponse:
+    return FileResponse(WEB_DIR / "templates" / "team.html")
+
+
+@app.get("/player")
+def player_page() -> FileResponse:
+    return FileResponse(WEB_DIR / "templates" / "player.html")
+
+
 @app.get("/api/config")
 def api_config() -> dict[str, str]:
     code = PREDICT_SEASON
@@ -223,6 +233,26 @@ def team_squad(team: str) -> dict[str, Any]:
         "squad_boost": data.get("squad_boost"),
         "players": data.get("players", []),
     }
+
+
+@app.get("/api/teams/{team}/profile")
+def team_profile_api(team: str) -> dict[str, Any]:
+    from src.team_profile import team_profile
+
+    try:
+        return team_profile(team)
+    except Exception as exc:
+        raise HTTPException(404, f"Team profile not found for {team}: {exc}") from exc
+
+
+@app.get("/api/players/profile")
+def player_profile_api(team: str, name: str) -> dict[str, Any]:
+    from src.player_profile import player_profile
+
+    try:
+        return player_profile(team, name)
+    except KeyError as exc:
+        raise HTTPException(404, str(exc)) from exc
 
 
 @app.get("/api/fixture")

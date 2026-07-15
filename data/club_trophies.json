@@ -1,0 +1,258 @@
+{
+  "Arsenal": {
+    "founded": 1886,
+    "nickname": "The Gunners",
+    "trophies": [
+      {"competition": "Premier League", "count": 4, "most_recent": "2025-26"},
+      {"competition": "FA Cup", "count": 14, "most_recent": "2019-20"},
+      {"competition": "League Cup", "count": 2, "most_recent": "1992-93"},
+      {"competition": "Community Shield", "count": 17, "most_recent": "2023"},
+      {"competition": "European Cup Winners' Cup", "count": 1, "most_recent": "1993-94"},
+      {"competition": "Inter-Cities Fairs Cup", "count": 1, "most_recent": "1969-70"}
+    ],
+    "most_recent_major": {"competition": "Premier League", "season": "2025-26", "label": "Premier League 2025-26"}
+  },
+  "Aston Villa": {
+    "founded": 1874,
+    "nickname": "The Villans",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 7, "most_recent": "1980-81"},
+      {"competition": "FA Cup", "count": 7, "most_recent": "1956-57"},
+      {"competition": "League Cup", "count": 5, "most_recent": "1995-96"},
+      {"competition": "European Cup / Champions League", "count": 1, "most_recent": "1981-82"},
+      {"competition": "Europa League", "count": 1, "most_recent": "2025-26"}
+    ],
+    "most_recent_major": {"competition": "Europa League", "season": "2025-26", "label": "Europa League 2025-26"}
+  },
+  "Bournemouth": {
+    "founded": 1899,
+    "nickname": "The Cherries",
+    "trophies": [
+      {"competition": "Championship", "count": 1, "most_recent": "2014-15"},
+      {"competition": "Third Division South", "count": 1, "most_recent": "1946-47"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2014-15", "label": "Championship 2014-15"}
+  },
+  "Brentford": {
+    "founded": 1889,
+    "nickname": "The Bees",
+    "trophies": [
+      {"competition": "Football League Second Division", "count": 1, "most_recent": "1934-35"},
+      {"competition": "Football League Third Division South", "count": 1, "most_recent": "1932-33"},
+      {"competition": "Football League Fourth Division", "count": 1, "most_recent": "1962-63"}
+    ],
+    "most_recent_major": {"competition": "Championship play-off", "season": "2020-21", "label": "Championship play-off 2020-21"}
+  },
+  "Brighton": {
+    "founded": 1901,
+    "nickname": "The Seagulls",
+    "trophies": [
+      {"competition": "Championship / Second Division", "count": 3, "most_recent": "2016-17"},
+      {"competition": "Third Division South", "count": 2, "most_recent": "1957-58"},
+      {"competition": "FA Charity Shield", "count": 1, "most_recent": "1910"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2016-17", "label": "Championship 2016-17"}
+  },
+  "Chelsea": {
+    "founded": 1905,
+    "nickname": "The Blues",
+    "trophies": [
+      {"competition": "Premier League", "count": 5, "most_recent": "2016-17"},
+      {"competition": "FA Cup", "count": 8, "most_recent": "2017-18"},
+      {"competition": "League Cup", "count": 5, "most_recent": "2023-24"},
+      {"competition": "Champions League", "count": 2, "most_recent": "2020-21"},
+      {"competition": "Europa League", "count": 2, "most_recent": "2018-19"},
+      {"competition": "Conference League", "count": 1, "most_recent": "2024-25"},
+      {"competition": "Cup Winners' Cup", "count": 2, "most_recent": "1997-98"},
+      {"competition": "Club World Cup", "count": 2, "most_recent": "2025"},
+      {"competition": "Community Shield", "count": 4, "most_recent": "2009"}
+    ],
+    "most_recent_major": {"competition": "Club World Cup", "season": "2025", "label": "Club World Cup 2025"}
+  },
+  "Crystal Palace": {
+    "founded": 1905,
+    "nickname": "The Eagles",
+    "trophies": [
+      {"competition": "FA Cup", "count": 1, "most_recent": "2024-25"},
+      {"competition": "Community Shield", "count": 1, "most_recent": "2025"},
+      {"competition": "Conference League", "count": 1, "most_recent": "2025-26"},
+      {"competition": "Full Members' Cup", "count": 1, "most_recent": "1990-91"},
+      {"competition": "Second Division", "count": 2, "most_recent": "1978-79"}
+    ],
+    "most_recent_major": {"competition": "Conference League", "season": "2025-26", "label": "Conference League 2025-26"}
+  },
+  "Everton": {
+    "founded": 1878,
+    "nickname": "The Toffees",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 9, "most_recent": "1986-87"},
+      {"competition": "FA Cup", "count": 5, "most_recent": "1994-95"},
+      {"competition": "Community Shield", "count": 9, "most_recent": "1987"},
+      {"competition": "Cup Winners' Cup", "count": 1, "most_recent": "1984-85"}
+    ],
+    "most_recent_major": {"competition": "FA Cup", "season": "1994-95", "label": "FA Cup 1994-95"}
+  },
+  "Fulham": {
+    "founded": 1879,
+    "nickname": "The Cottagers",
+    "trophies": [
+      {"competition": "Championship / Second Division", "count": 3, "most_recent": "2021-22"},
+      {"competition": "Intertoto Cup", "count": 1, "most_recent": "2002"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2021-22", "label": "Championship 2021-22"}
+  },
+  "Leeds": {
+    "founded": 1919,
+    "nickname": "The Whites",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 3, "most_recent": "1991-92"},
+      {"competition": "Championship / Second Division", "count": 5, "most_recent": "2024-25"},
+      {"competition": "FA Cup", "count": 1, "most_recent": "1971-72"},
+      {"competition": "League Cup", "count": 1, "most_recent": "1967-68"},
+      {"competition": "Inter-Cities Fairs Cup", "count": 2, "most_recent": "1970-71"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2024-25", "label": "Championship 2024-25"}
+  },
+  "Liverpool": {
+    "founded": 1892,
+    "nickname": "The Reds",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 20, "most_recent": "2024-25"},
+      {"competition": "FA Cup", "count": 8, "most_recent": "2021-22"},
+      {"competition": "League Cup", "count": 10, "most_recent": "2023-24"},
+      {"competition": "Champions League", "count": 6, "most_recent": "2018-19"},
+      {"competition": "UEFA Cup / Europa League", "count": 3, "most_recent": "2000-01"},
+      {"competition": "Club World Cup", "count": 1, "most_recent": "2019"},
+      {"competition": "Community Shield", "count": 16, "most_recent": "2022"}
+    ],
+    "most_recent_major": {"competition": "Premier League", "season": "2024-25", "label": "Premier League 2024-25"}
+  },
+  "Man City": {
+    "founded": 1880,
+    "nickname": "The Citizens",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 10, "most_recent": "2023-24"},
+      {"competition": "FA Cup", "count": 8, "most_recent": "2025-26"},
+      {"competition": "League Cup", "count": 9, "most_recent": "2025-26"},
+      {"competition": "Champions League", "count": 1, "most_recent": "2022-23"},
+      {"competition": "Club World Cup", "count": 1, "most_recent": "2023"},
+      {"competition": "Community Shield", "count": 7, "most_recent": "2024"}
+    ],
+    "most_recent_major": {"competition": "FA Cup", "season": "2025-26", "label": "FA Cup 2025-26"}
+  },
+  "Man United": {
+    "founded": 1878,
+    "nickname": "The Red Devils",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 20, "most_recent": "2012-13"},
+      {"competition": "FA Cup", "count": 13, "most_recent": "2023-24"},
+      {"competition": "League Cup", "count": 6, "most_recent": "2022-23"},
+      {"competition": "Champions League", "count": 3, "most_recent": "2007-08"},
+      {"competition": "Europa League", "count": 1, "most_recent": "2016-17"},
+      {"competition": "Cup Winners' Cup", "count": 1, "most_recent": "1990-91"},
+      {"competition": "Club World Cup", "count": 1, "most_recent": "2008"},
+      {"competition": "Community Shield", "count": 21, "most_recent": "2016"}
+    ],
+    "most_recent_major": {"competition": "FA Cup", "season": "2023-24", "label": "FA Cup 2023-24"}
+  },
+  "Newcastle": {
+    "founded": 1892,
+    "nickname": "The Magpies",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 4, "most_recent": "1926-27"},
+      {"competition": "FA Cup", "count": 6, "most_recent": "1954-55"},
+      {"competition": "League Cup", "count": 1, "most_recent": "2024-25"},
+      {"competition": "Inter-Cities Fairs Cup", "count": 1, "most_recent": "1968-69"},
+      {"competition": "Community Shield", "count": 1, "most_recent": "1909"}
+    ],
+    "most_recent_major": {"competition": "League Cup", "season": "2024-25", "label": "League Cup 2024-25"}
+  },
+  "Nott'm Forest": {
+    "founded": 1865,
+    "nickname": "The Reds",
+    "trophies": [
+      {"competition": "First Division", "count": 1, "most_recent": "1977-78"},
+      {"competition": "FA Cup", "count": 2, "most_recent": "1958-59"},
+      {"competition": "League Cup", "count": 4, "most_recent": "1989-90"},
+      {"competition": "European Cup / Champions League", "count": 2, "most_recent": "1979-80"},
+      {"competition": "Community Shield", "count": 1, "most_recent": "1978"}
+    ],
+    "most_recent_major": {"competition": "League Cup", "season": "1989-90", "label": "League Cup 1989-90"}
+  },
+  "Sunderland": {
+    "founded": 1879,
+    "nickname": "The Black Cats",
+    "trophies": [
+      {"competition": "First Division", "count": 6, "most_recent": "1935-36"},
+      {"competition": "FA Cup", "count": 2, "most_recent": "1972-73"},
+      {"competition": "Championship", "count": 1, "most_recent": "2006-07"},
+      {"competition": "Championship play-off", "count": 1, "most_recent": "2024-25"}
+    ],
+    "most_recent_major": {"competition": "Championship play-off", "season": "2024-25", "label": "Championship play-off 2024-25"}
+  },
+  "Tottenham": {
+    "founded": 1882,
+    "nickname": "Spurs",
+    "trophies": [
+      {"competition": "First Division / Premier League", "count": 2, "most_recent": "1960-61"},
+      {"competition": "FA Cup", "count": 8, "most_recent": "1990-91"},
+      {"competition": "League Cup", "count": 4, "most_recent": "2007-08"},
+      {"competition": "UEFA Cup / Europa League", "count": 3, "most_recent": "2024-25"},
+      {"competition": "Cup Winners' Cup", "count": 1, "most_recent": "1962-63"},
+      {"competition": "Community Shield", "count": 7, "most_recent": "1991"}
+    ],
+    "most_recent_major": {"competition": "Europa League", "season": "2024-25", "label": "Europa League 2024-25"}
+  },
+  "West Ham": {
+    "founded": 1895,
+    "nickname": "The Hammers",
+    "trophies": [
+      {"competition": "FA Cup", "count": 3, "most_recent": "1979-80"},
+      {"competition": "Cup Winners' Cup", "count": 1, "most_recent": "1964-65"},
+      {"competition": "Conference League", "count": 1, "most_recent": "2022-23"},
+      {"competition": "Intertoto Cup", "count": 1, "most_recent": "1999"},
+      {"competition": "Second Division", "count": 2, "most_recent": "1980-81"}
+    ],
+    "most_recent_major": {"competition": "Conference League", "season": "2022-23", "label": "Conference League 2022-23"}
+  },
+  "Wolves": {
+    "founded": 1877,
+    "nickname": "Wolves",
+    "trophies": [
+      {"competition": "First Division", "count": 3, "most_recent": "1958-59"},
+      {"competition": "FA Cup", "count": 4, "most_recent": "1959-60"},
+      {"competition": "League Cup", "count": 2, "most_recent": "1979-80"},
+      {"competition": "Championship / Second Division", "count": 4, "most_recent": "2017-18"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2017-18", "label": "Championship 2017-18"}
+  },
+  "Coventry": {
+    "founded": 1883,
+    "nickname": "The Sky Blues",
+    "trophies": [
+      {"competition": "FA Cup", "count": 1, "most_recent": "1986-87"},
+      {"competition": "Championship / Second Division", "count": 2, "most_recent": "2025-26"}
+    ],
+    "most_recent_major": {"competition": "Championship", "season": "2025-26", "label": "Championship 2025-26"}
+  },
+  "Hull": {
+    "founded": 1904,
+    "nickname": "The Tigers",
+    "trophies": [
+      {"competition": "Third Division North", "count": 1, "most_recent": "1965-66"},
+      {"competition": "Championship play-off", "count": 2, "most_recent": "2025-26"}
+    ],
+    "most_recent_major": {"competition": "Championship play-off", "season": "2025-26", "label": "Championship play-off 2025-26"}
+  },
+  "Ipswich": {
+    "founded": 1878,
+    "nickname": "The Tractor Boys",
+    "trophies": [
+      {"competition": "First Division", "count": 1, "most_recent": "1961-62"},
+      {"competition": "FA Cup", "count": 1, "most_recent": "1977-78"},
+      {"competition": "UEFA Cup", "count": 1, "most_recent": "1980-81"},
+      {"competition": "Championship / Second Division", "count": 3, "most_recent": "1991-92"}
+    ],
+    "most_recent_major": {"competition": "UEFA Cup", "season": "1980-81", "label": "UEFA Cup 1980-81"}
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "erling haaland": {
+    "position": "Centre-Forward",
+    "nationality": "Norway",
+    "foot": "Left",
+    "joined": "2022",
+    "summary": "Elite goalscorer and two-time Golden Boot winner since joining Manchester City.",
+    "trophies": [
+      {"competition": "Premier League", "season": "2022-23"},
+      {"competition": "Premier League", "season": "2023-24"},
+      {"competition": "Champions League", "season": "2022-23"},
+      {"competition": "FA Cup", "season": "2022-23"},
+      {"competition": "Treble", "season": "2022-23", "label": "Treble winner 2022-23"}
+    ],
+    "career": [
+      {"club": "Bryne FK", "from": "2016", "to": "2017"},
+      {"club": "Molde", "from": "2017", "to": "2019"},
+      {"club": "Red Bull Salzburg", "from": "2019", "to": "2020"},
+      {"club": "Borussia Dortmund", "from": "2020", "to": "2022"},
+      {"club": "Man City", "from": "2022", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Man City", "apps": 31, "goals": 22, "competition": "Premier League"},
+      {"season": "2023-24", "club": "Man City", "apps": 31, "goals": 27, "competition": "Premier League"},
+      {"season": "2022-23", "club": "Man City", "apps": 35, "goals": 36, "competition": "Premier League"}
+    ]
+  },
+  "mohamed salah": {
+    "position": "Right Winger",
+    "nationality": "Egypt",
+    "foot": "Left",
+    "joined": "2017",
+    "summary": "Liverpool's all-time Premier League top scorer and multiple Golden Boot winner.",
+    "trophies": [
+      {"competition": "Premier League", "season": "2019-20"},
+      {"competition": "Champions League", "season": "2018-19"},
+      {"competition": "FA Cup", "season": "2021-22"},
+      {"competition": "League Cup", "season": "2024-25"},
+      {"competition": "Club World Cup", "season": "2019"}
+    ],
+    "career": [
+      {"club": "Basel", "from": "2012", "to": "2014"},
+      {"club": "Chelsea", "from": "2014", "to": "2015"},
+      {"club": "Fiorentina / Roma", "from": "2015", "to": "2017"},
+      {"club": "Liverpool", "from": "2017", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Liverpool", "apps": 38, "goals": 29, "competition": "Premier League"},
+      {"season": "2023-24", "club": "Liverpool", "apps": 32, "goals": 18, "competition": "Premier League"},
+      {"season": "2022-23", "club": "Liverpool", "apps": 38, "goals": 19, "competition": "Premier League"}
+    ]
+  },
+  "bukayo saka": {
+    "position": "Right Winger",
+    "nationality": "England",
+    "foot": "Left",
+    "joined": "2018",
+    "summary": "Arsenal academy graduate and England regular; key creative outlet for the Gunners.",
+    "trophies": [
+      {"competition": "FA Cup", "season": "2019-20"},
+      {"competition": "Community Shield", "season": "2023"}
+    ],
+    "career": [
+      {"club": "Arsenal", "from": "2018", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Arsenal", "apps": 35, "goals": 11, "competition": "Premier League"},
+      {"season": "2023-24", "club": "Arsenal", "apps": 35, "goals": 16, "competition": "Premier League"}
+    ]
+  },
+  "cole palmer": {
+    "position": "Attacking Midfield",
+    "nationality": "England",
+    "foot": "Left",
+    "joined": "2023",
+    "summary": "Breakout star after moving from Manchester City; Chelsea's primary creator and scorer.",
+    "trophies": [
+      {"competition": "Premier League", "season": "2022-23", "club": "Man City"},
+      {"competition": "Champions League", "season": "2022-23", "club": "Man City"},
+      {"competition": "Treble", "season": "2022-23", "club": "Man City"}
+    ],
+    "career": [
+      {"club": "Man City", "from": "2020", "to": "2023"},
+      {"club": "Chelsea", "from": "2023", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Chelsea", "apps": 37, "goals": 15, "competition": "Premier League"},
+      {"season": "2023-24", "club": "Chelsea", "apps": 34, "goals": 22, "competition": "Premier League"}
+    ]
+  },
+  "virgil van dijk": {
+    "position": "Centre-Back",
+    "nationality": "Netherlands",
+    "foot": "Right",
+    "joined": "2018",
+    "summary": "Liverpool captain and PFA Player of the Year; cornerstone of Klopp-era success.",
+    "trophies": [
+      {"competition": "Premier League", "season": "2019-20"},
+      {"competition": "Champions League", "season": "2018-19"},
+      {"competition": "FA Cup", "season": "2021-22"},
+      {"competition": "League Cup", "season": "2024-25"}
+    ],
+    "career": [
+      {"club": "Groningen", "from": "2011", "to": "2013"},
+      {"club": "Celtic", "from": "2013", "to": "2015"},
+      {"club": "Southampton", "from": "2015", "to": "2018"},
+      {"club": "Liverpool", "from": "2018", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Liverpool", "apps": 37, "goals": 3, "competition": "Premier League"}
+    ]
+  },
+  "harry kane": {
+    "position": "Centre-Forward",
+    "nationality": "England",
+    "foot": "Right",
+    "joined": "2023",
+    "summary": "Former Tottenham captain and England record scorer; now at Bayern Munich (historical PL data shown).",
+    "trophies": [
+      {"competition": "Premier League Golden Boot", "season": "2015-16"},
+      {"competition": "Premier League Golden Boot", "season": "2016-17"},
+      {"competition": "Premier League Golden Boot", "season": "2020-21"},
+      {"competition": "Premier League Golden Boot", "season": "2022-23"}
+    ],
+    "career": [
+      {"club": "Tottenham", "from": "2009", "to": "2023"},
+      {"club": "Bayern Munich", "from": "2023", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2022-23", "club": "Tottenham", "apps": 38, "goals": 30, "competition": "Premier League"},
+      {"season": "2021-22", "club": "Tottenham", "apps": 37, "goals": 17, "competition": "Premier League"}
+    ],
+    "club_trophies_note": "Left Tottenham in 2023 — no longer in current PL squad."
+  },
+  "bruno fernandes": {
+    "position": "Attacking Midfield",
+    "nationality": "Portugal",
+    "foot": "Right",
+    "joined": "2020",
+    "summary": "Man United captain and creative hub since arriving from Sporting CP.",
+    "trophies": [
+      {"competition": "League Cup", "season": "2022-23"},
+      {"competition": "FA Cup", "season": "2023-24"},
+      {"competition": "Europa League", "season": "2020-21"}
+    ],
+    "career": [
+      {"club": "Novara / Udinese / Sampdoria", "from": "2012", "to": "2017"},
+      {"club": "Sporting CP", "from": "2017", "to": "2020"},
+      {"club": "Man United", "from": "2020", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Man United", "apps": 36, "goals": 8, "competition": "Premier League"}
+    ]
+  },
+  "declan rice": {
+    "position": "Central Midfield",
+    "nationality": "England",
+    "foot": "Right",
+    "joined": "2023",
+    "summary": "England midfielder signed from West Ham to anchor Arsenal's midfield.",
+    "trophies": [
+      {"competition": "Conference League", "season": "2022-23", "club": "West Ham"}
+    ],
+    "career": [
+      {"club": "West Ham", "from": "2017", "to": "2023"},
+      {"club": "Arsenal", "from": "2023", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Arsenal", "apps": 35, "goals": 4, "competition": "Premier League"}
+    ]
+  },
+  "ruben dias": {
+    "position": "Centre-Back",
+    "nationality": "Portugal",
+    "foot": "Right",
+    "joined": "2020",
+    "summary": "Portugal international and PFA Player of the Year during City's 2020-21 title win.",
+    "trophies": [
+      {"competition": "Premier League", "season": "2020-21"},
+      {"competition": "Premier League", "season": "2021-22"},
+      {"competition": "Premier League", "season": "2022-23"},
+      {"competition": "Premier League", "season": "2023-24"},
+      {"competition": "Champions League", "season": "2022-23"}
+    ],
+    "career": [
+      {"club": "Benfica", "from": "2017", "to": "2020"},
+      {"club": "Man City", "from": "2020", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Man City", "apps": 30, "goals": 0, "competition": "Premier League"}
+    ]
+  },
+  "son heung-min": {
+    "position": "Left Winger",
+    "nationality": "South Korea",
+    "foot": "Both",
+    "joined": "2015",
+    "summary": "Tottenham captain and 2021-22 Premier League Golden Boot winner.",
+    "trophies": [
+      {"competition": "Premier League Golden Boot", "season": "2021-22"}
+    ],
+    "career": [
+      {"club": "Hamburg / Leverkusen", "from": "2010", "to": "2015"},
+      {"club": "Tottenham", "from": "2015", "to": "present"}
+    ],
+    "season_stats": [
+      {"season": "2024-25", "club": "Tottenham", "apps": 30, "goals": 7, "competition": "Premier League"},
+      {"season": "2021-22", "club": "Tottenham", "apps": 35, "goals": 23, "competition": "Premier League"}
+    ]
+  }
+}

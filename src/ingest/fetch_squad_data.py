@@ -142,7 +142,7 @@ def fetch_net_spend(tm_slug: str, tm_id: int, season: int = 2026) -> tuple[float
 
 
 def fetch_club_players(tm_slug: str, tm_id: int, season: int = 2026) -> list[dict]:
-    """Fetch full squad player list from Transfermarkt."""
+    """Fetch full squad player list from Transfermarkt (detailed kader view)."""
     url = f"https://www.transfermarkt.com/{tm_slug}/kader/verein/{tm_id}/saison_id/{season}/plus/1"
     r = requests.get(url, headers=HEADERS, timeout=45)
     if r.status_code != 200:
@@ -154,7 +154,6 @@ def fetch_club_players(tm_slug: str, tm_id: int, season: int = 2026) -> list[dic
 
     players = []
     seen: set[str] = set()
-    # Main data rows only — Transfermarkt duplicates each player in a spacer row
     for row in table.select("tbody tr.odd, tbody tr.even"):
         name_el = row.select_one("td.hauptlink a")
         if not name_el:
@@ -162,10 +161,43 @@ def fetch_club_players(tm_slug: str, tm_id: int, season: int = 2026) -> list[dic
         name = name_el.get_text(strip=True)
         if not name or name in seen:
             continue
-        pos_el = row.select_one("td.posrela table tr td")
-        pos = pos_el.get_text(strip=True) if pos_el else ""
+        href = name_el.get("href", "")
+        tm_player_id = None
+        tm_player_slug = ""
+        m = re.search(r"/([^/]+)/profil/spieler/(\d+)", href)
+        if m:
+            tm_player_slug, tm_player_id = m.group(1), int(m.group(2))
+
         tds = row.select("td")
-        age = tds[5].get_text(strip=True) if len(tds) > 5 else ""
+        texts = [" ".join(td.get_text(" ", strip=True).split()) for td in tds]
+
+        pos = ""
+        if len(texts) > 4 and texts[4] and not re.search(r"\d", texts[4]):
+            pos = texts[4]
+        if not pos:
+            pos_el = row.select_one("td.posrela table tr td")
+            pos = pos_el.get_text(strip=True) if pos_el else ""
+
+        age = next((t for t in texts if re.search(r"\(\d{1,2}\)$", t) and "/" in t), "")
+        height = next((t for t in texts if re.fullmatch(r"\d,\d{2}m", t.replace(".", ",").replace(" ", "")) or re.fullmatch(r"\d\.\d{2}m", t)), "")
+        # normalize height match more loosely
+        if not height:
+            height = next((t for t in texts if re.search(r"^\d[,.]\d{2}\s*m$", t)), "")
+        foot = next((t for t in texts if t.lower() in {"left", "right", "both"}), "")
+        joined = next(
+            (t for t in texts if re.fullmatch(r"\d{2}/\d{2}/\d{4}", t) and t != age.split(" ")[0]),
+            "",
+        )
+        nationality = ""
+        for td in tds:
+            flags = [
+                (img.get("title") or img.get("alt") or "").strip()
+                for img in td.select("img.flaggenrahmen")
+            ]
+            if flags:
+                nationality = ", ".join(flags)
+                break
+
         mv_el = row.select_one("td.rechts.hauptlink") or row.select_one("td.rechts")
         mv = parse_market_value(mv_el.get_text(strip=True)) if mv_el else 0.0
         seen.add(name)
@@ -173,7 +205,13 @@ def fetch_club_players(tm_slug: str, tm_id: int, season: int = 2026) -> list[dic
             "name": name,
             "position": pos,
             "age": age,
+            "nationality": nationality,
+            "foot": foot,
+            "joined": joined,
+            "height": height,
             "market_value_m": mv,
+            "tm_player_id": tm_player_id,
+            "tm_player_slug": tm_player_slug,
         })
     return players
 
